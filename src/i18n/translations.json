@@ -1,0 +1,58 @@
+{
+  "es": {
+    "navbar": {
+      "home": "Inicio",
+      "about": "Acerca de mi",   
+      "work": "Proyectos",  
+      "myMusic": "Mi Música",
+      "contact": "Contacto",
+      "contactMe": "contactame"     
+    },
+    "config": {
+      "configColorSwitcher": "Elige un color",
+      "configPredetermined": "Por defecto",
+      "headerLight": "Claro",
+      "headerDark": "Oscuro"
+    },
+    "home": {
+      "mainWelcome": "Hola Mundo!!",     
+      "introducesMe": "Soy",
+      "introducesDeveloper": "desarrollador Front-end."
+    },
+    "contact": {
+      "name": "Tu nombre",
+      "subject": "Asunto",
+      "email": "Correo",
+      "message": "Algun mensaje...",
+      "send": "Enviar"
+    }
+  },
+  "en": {
+    "navbar": {
+      "home": "Home",
+      "about": "About",   
+      "work": "Work",  
+      "myMusic": "My Music",
+      "contact": "Contact",
+      "contactMe": "contact me"     
+    },
+    "config": {
+      "configColorSwitcher": "Chooce a color",
+      "configPredetermined": "Reset",
+      "headerLight": "Light",
+      "headerDark": "Dark"
+    },
+    "home": {
+      "mainWelcome": "Hello World!!",     
+      "introducesMe": "I'm",
+      "introducesDeveloper": "a Front-End developer."
+    },
+    "contact": {
+      "name": "Your name",
+      "subject": "Subject",
+      "email": "Your email",
+      "message": "Some message...",
+      "send": "Send"
+    }
+  }
+}

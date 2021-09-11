@@ -1,0 +1,10 @@
+export const gray           = '#939191';
+export const purple         = '#a21676';
+export const yellow         = 'yellow';
+export const orange         = 'orange'; 
+export const blue           = 'blue'; 
+export const green          = 'green';
+export const white          = 'white';
+export const shadow         = `3px 5px 5px ${gray}`;
+export const transition     = 'all 0.5s';
+export const space_top      = '30px';

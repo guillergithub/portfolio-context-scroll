@@ -1,25 +1,67 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState,  } from "react";
+import { LenguageProvider } from "../src/context/Lenguage";
+import { ColorProvider } from "./context/Colors";
+import ReactPageScroller from "react-page-scroller";
+import Nav from "../src/components/Navbar";
+import Dots from "./components/DotsNav";
+import UpButton from "./components/UpButton";
+import Home from "../src/components/Home";
+import About from "./components/About";
+import Work from "./components/Work";
+import Contact from '../src/components/Contact';
 
-function App() {
+const App = () => {
+  
+  const [currentPage, setCurrentPage] = useState();
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const handleOnChange = (page) => {
+    setCurrentPage(page);
+    console.log('handleOnChange (page): ', currentPage)
+  };     
+  
+  const handleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  
+  // const handleOnChangeLimit = (page) => {
+  //   setCurrentPage(0);
+  // }; 
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ColorProvider>
+      <LenguageProvider>
+        <Nav
+          handleMenu={handleMenu}
+          isOpen={isOpen}
+          handlePageChange={(page) => handleOnChange(page)}
+        />
+        <Dots
+          isOpen={isOpen}
+          handlePageChange={(page) => handleOnChange(page)}
+        />
+        <UpButton
+          currentPage={currentPage}
+          handlePageChange={() => handleOnChange(0)}
+        />
+
+        <ReactPageScroller               
+          customPageNumber={currentPage}
+          onBeforePageScroll={() => handleOnChange()}
+          animationTimer={700}
+          // handleScrollUnavailable={handleOnChangeLimit}
+          >        
+
+        <Home />
+        <About currentPage={currentPage} /> 
+        <Work />
+        <Contact />
+        
+        </ReactPageScroller>
+      </LenguageProvider>
+    </ColorProvider>
   );
-}
+};
 
 export default App;
