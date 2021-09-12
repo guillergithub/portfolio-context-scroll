@@ -9,37 +9,36 @@ import Home from "../src/components/Home";
 import About from "./components/About";
 import Work from "./components/Work";
 import Contact from '../src/components/Contact';
+import { useEffect } from "react";
 
 const App = () => {
   
-  const [currentPage, setCurrentPage] = useState();
+  const [currentPage, setCurrentPage] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   
   const handleOnChange = (page) => {
     setCurrentPage(page);
-    console.log('handleOnChange (page): ', currentPage)
   };     
   
   const handleMenu = () => {
     setIsOpen(!isOpen);
   };
-  
-  // const handleOnChangeLimit = (page) => {
-  //   setCurrentPage(0);
-  // }; 
+
   
 
+  useEffect(() => {console.log('Cambio!!', currentPage)}, [currentPage])
+  
   return (
     <ColorProvider>
       <LenguageProvider>
         <Nav
           handleMenu={handleMenu}
           isOpen={isOpen}
-          handlePageChange={(page) => handleOnChange(page)}
+          handlePageChange={(page) => setCurrentPage(page)}
         />
         <Dots
           isOpen={isOpen}
-          handlePageChange={(page) => handleOnChange(page)}
+          handlePageChange={(page) => setCurrentPage(page)}
         />
         <UpButton
           currentPage={currentPage}
@@ -48,15 +47,15 @@ const App = () => {
 
         <ReactPageScroller               
           customPageNumber={currentPage}
-          onBeforePageScroll={() => handleOnChange()}
+          pageOnChange={(page) => handleOnChange(page)}
           animationTimer={700}
-          // handleScrollUnavailable={handleOnChangeLimit}
+          
           >        
 
-        <Home />
+        <Home currentPage={currentPage} />
         <About currentPage={currentPage} /> 
-        <Work />
-        <Contact />
+        <Work currentPage={currentPage}/>
+        <Contact currentPage={currentPage}/>
         
         </ReactPageScroller>
       </LenguageProvider>

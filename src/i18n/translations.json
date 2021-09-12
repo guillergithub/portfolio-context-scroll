@@ -2,7 +2,7 @@
   "es": {
     "navbar": {
       "home": "Inicio",
-      "about": "Acerca de mi",   
+      "about": "Sobre mi",   
       "work": "Proyectos",  
       "myMusic": "Mi Música",
       "contact": "Contacto",
@@ -24,7 +24,13 @@
       "subject": "Asunto",
       "email": "Correo",
       "message": "Algun mensaje...",
-      "send": "Enviar"
+      "send": "Enviar",
+      "greets": {
+        "title": "Enviame un hola",
+        "follow": "Sigueme",
+        "text": "Siempre estoy abierto a escuchar propuestas/ideas sobre proyectos de desarrollo o... ¿tienes algun ritmo en mente? ¡¡Toquemos!!",
+        "hireMe": "Contratame"
+      }
     }
   },
   "en": {
@@ -52,7 +58,14 @@
       "subject": "Subject",
       "email": "Your email",
       "message": "Some message...",
-      "send": "Send"
+      "send": "Send",
+      "greets": {
+        "title": "Just say hi",
+        "follow": "Follow me",
+        "text": "Im always open to discuss about any project about tech or... any rhythm in mind? Let's jam!!",
+        "hireMe": "Hire me"
+
+      }
     }
   }
 }

@@ -2,28 +2,28 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  color: #939191;
+  /* color: #939191; */
 }
 
-/* width */
-/* ::-webkit-scrollbar {
+width
+::-webkit-scrollbar {
   width: 8px;
-} */
+}
 
 /* Track */
-/* ::-webkit-scrollbar-track-piece:start {
+::-webkit-scrollbar-track-piece:start {
   background: none; 
   margin-top: 0px;  
 
-} */
+}
  
 /* Handle */
-/* ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: #a21676;   
-} */
+}
 
 /* Handle on hover */
-/* ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: #555; 
-} */
+}
 

@@ -62,7 +62,7 @@ export const NavContainer = styled.nav`
   height: 80px;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 9;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -89,15 +89,15 @@ export const Menu = styled.div`
   transition: ${CSS.transition};
   -webkit-transition: ${CSS.transition};
   box-shadow: ${CSS.shadow};
-  ${media.tablet} {
-    left: 45vw;
-  }
-  ${media.screen} {
-    left: 50vw;
-  }
-  ${media.LargeScreen} {
-    left: 65%;
-  }
+    ${media.tablet} {
+      left: 45vw;
+    }
+    ${media.screen} {
+      left: 50vw;
+    }
+    ${media.LargeScreen} {
+      left: 65%;
+    }
 `;
 
 export const MenuList = styled.ul`
@@ -114,6 +114,31 @@ export const MenuList = styled.ul`
   ${media.tablet} {
     width: 370px;
   }
+
+  
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  /* height: 7px; */
+}
+
+/* Track */
+::-webkit-scrollbar-track-piece:start {
+  background: none; 
+  margin-top: 10px;  
+
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: ${props => props.color};   
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 `;
 
 export const MenuItem = styled.li`
@@ -144,7 +169,7 @@ export const PopBody = styled.div`
   display: flex;
   justify-content: center;
   border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;  
 `;
 
 export const PopHeader = styled.div`
@@ -154,7 +179,7 @@ export const PopHeader = styled.div`
   text-align: center;
   transition: ${CSS.transition};  
   border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-right-radius: 5px;  
     h3{
       color: ${CSS.white};
     }

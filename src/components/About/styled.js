@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 export const AboutContainer = styled.div`
   background: lightsalmon;
-  height: 100%;
+  margin: 0;  
   width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  /* margin: 0;  
   flex-flow: column;
-  font-size: 3rem; */
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 3rem;
+`;
+
+export const StaticTitle = styled.h3`  
 `;

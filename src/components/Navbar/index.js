@@ -40,7 +40,7 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
   const { color, handleColor } = useContext(ColorContext);
 
   const popover = (
-    <Popover id="popover-basic">
+    <Popover id="popover-basic" style={{zIndex: 9999}}>
       <ArrowUp />
       <PopHeader>
         <Popover.Header as="h3">Color options</Popover.Header>
@@ -50,22 +50,10 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
           <ColorOptionsContainer>
             <ColorOption color={CSS.gray} onClick={() => handleColor("gray")} />
             <ColorOption color={CSS.blue} onClick={() => handleColor("blue")} />
-            <ColorOption
-              color={CSS.green}
-              onClick={() => handleColor("green")}
-            />
-            <ColorOption
-              color={CSS.yellow}
-              onClick={() => handleColor("yellow")}
-            />
-            <ColorOption
-              color={CSS.orange}
-              onClick={() => handleColor("orange")}
-            />
-            <ColorOption
-              color={CSS.purple}
-              onClick={() => handleColor("purple")}
-            />
+            <ColorOption color={CSS.green} onClick={() => handleColor("green")} />
+            <ColorOption color={CSS.yellow} onClick={() => handleColor("yellow")} />
+            <ColorOption color={CSS.orange} onClick={() => handleColor("orange")} />
+            <ColorOption color={CSS.purple} onClick={() => handleColor("purple")} />
           </ColorOptionsContainer>
         </Popover.Body>
       </PopBody>
@@ -79,7 +67,7 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
           <Icon
             trigger="click"
             path={mdiPalette}
-            color={CSS.gray}
+            color={CSS.white}
             size={1.3}
             onClick={handleColor(() => handleColor("green"))}
             className="margin-right"
@@ -88,23 +76,28 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
         </OverlayTrigger>
         <Icon
           path={mdiTranslate}
-          color={CSS.gray}
+          color={CSS.white}
           size={1.3}
           onClick={handleLenguage}
           className="margin-right"
         />
-        <Icon path={mdiMenu} color={CSS.gray} size={1.3} onClick={handleMenu} />
+        <Icon path={mdiMenu} color={CSS.white} size={1.3} onClick={handleMenu} />
       </IconContainer>
 
       <MenuContainer>
         <Menu $transform={isOpen}>
           <ButtonsContainer mt={33}>
-            <Icon
-              path={mdiPalette}
-              color={CSS.gray}
-              size={1.3}
-              onClick={handleColor}
-            />
+          <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
+          <Icon
+            trigger="click"
+            path={mdiPalette}
+            color={CSS.gray}
+            size={1.3}
+            onClick={handleColor(() => handleColor("green"))}
+            className="margin-right"
+            data-toggle="popover"
+          />
+        </OverlayTrigger>
             <Icon
               path={mdiTranslate}
               color={CSS.gray}
@@ -125,6 +118,7 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
 
           {isOpen && (
             <MenuList
+              color={color}
               as={motion.ul}
               initial={{ opacity: "0", y: "-50" }}
               animate={{ opacity: 1, y: 0 }}
@@ -156,15 +150,17 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
                 <MenuLink color={color}>{i18n[lenguage].navbar.work}</MenuLink>
               </MenuItem>
               
-              {/* <MenuItem
+              <MenuItem
                 onClick={() => {
                   handlePageChange(3);
                   handleMenu();
                 }}
-              >
-                <MenuLink color={color}>
-                  {i18n[lenguage].navbar.myMusic}
-                </MenuLink>
+              ><MenuLink color={color}>
+              {i18n[lenguage].navbar.contact}
+            </MenuLink>
+            </MenuItem>
+                
+              {/* 
               </MenuItem> */}
 
               {/* <MenuItem

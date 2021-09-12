@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { Dot, DotsContainer } from "./styled"
+import ColorContext from "../../context/Colors";
 
 const Dots = ({ isOpen, handlePageChange }) => {
+
+  const { color } = useContext(ColorContext);
 
   const pages = [];
   for(let i=0; i <= 3; i++) {
@@ -10,7 +14,7 @@ const Dots = ({ isOpen, handlePageChange }) => {
   return (
     <DotsContainer>
       { pages.map((number) => (
-        <Dot key={number} onClick={() => handlePageChange(number)} $transform={isOpen} />
+        <Dot key={number} color={color} onClick={() => handlePageChange(number)} $transform={isOpen} />
       )) }      
     </DotsContainer>
   )
