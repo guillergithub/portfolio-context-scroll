@@ -22,11 +22,9 @@ const App = () => {
   
   const handleMenu = () => {
     setIsOpen(!isOpen);
-  };
+  };  
 
-  
-
-  useEffect(() => {console.log('Cambio!!', currentPage)}, [currentPage])
+  // useEffect(() => {console.log('Cambio!!', currentPage)}, [currentPage])
   
   return (
     <ColorProvider>

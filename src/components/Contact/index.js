@@ -26,6 +26,7 @@ import {
   mdiYoutube,
   mdiLinkedin
 } from "@mdi/js";
+import * as CSS from '../../utils/vars';
 
 const Contact = ({ currentPage }) => {
   const { color } = useContext(ColorContext);
@@ -87,22 +88,21 @@ const Contact = ({ currentPage }) => {
         <GreetContainer>
           <GreetTitle color={color}>{i18n[lenguage].contact.greets.title}</GreetTitle>
           <GreetText> {i18n[lenguage].contact.greets.text}</GreetText>          
-          <GreetText> <span>{i18n[lenguage].contact.hireMe}</span></GreetText>          
+          {/* <GreetText> <span>{i18n[lenguage].contact.hireMe}</span></GreetText>           */}
           
           <GreetFooter>
              <span>{i18n[lenguage].contact.greets.follow}</span>
             <GreetSocials>
-            <a target='_blank' rel="noreferrer" href='https://www.linkedin.com'><Icon path={mdiLinkedin} size={1.3}/></a>
-            <a target='_blank' rel="noreferrer" href='https://www.github.com'><Icon path={mdiGithub} size={1.3}/></a>
-            <a target='_blank' rel="noreferrer" href='https://www.youtube.com'><Icon path={mdiYoutube} size={1.3}/></a>
-            <a target='_blank' rel="noreferrer" href='https://www.instagram.com'><Icon path={mdiInstagram} size={1.3}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.linkedin.com'><Icon path={mdiLinkedin} size={1.3} fill={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.github.com'><Icon path={mdiGithub} size={1.3} fill={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.youtube.com'><Icon path={mdiYoutube} size={1.3} fill={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.instagram.com'><Icon path={mdiInstagram} size={1.3} fill={CSS.white}/></a>
             </GreetSocials>
-              
-
           </GreetFooter>
         </GreetContainer>
 
-        <FormContainer onSubmit={sendEmail}>
+        
+        <FormContainer onSubmit={sendEmail}>               
           <Label >{i18n[lenguage].contact.name}</Label>
           <Input name="name" />
           <Label >{i18n[lenguage].contact.subject}</Label>

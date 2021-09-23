@@ -1,11 +1,5 @@
 import styled from 'styled-components';
-
-// const media = {
-//   tablet: "@media(min-width: 760px)",
-//   screen: "@media(min-width: 1000px)",
-//   LargeScreen: "@media(min-width: 1300px)",
-// };
-
+import * as CSS from '../utils/vars';
 
 export const SectionContainer = styled.div`
   margin: 0;  
@@ -17,16 +11,24 @@ export const SectionContainer = styled.div`
 `;
 
 export const SectionTitle = styled.div`
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   transform: rotate(90deg);
   position: fixed;
-  left: -230px;
-  top: ${props => props.top * 10}%;
-  font-size: 4rem;
+  left: -250px;
+  top: ${props => props.top * 10}%;  
   width: 600px;  
   opacity: .3;
   color: white;
   z-index: 999;
+  
+  ${CSS.media.phones}{
+    display: flex;
+    font-size: 3rem;
+  }
+
+  ${CSS.media.tablet}{
+    /* font-size: 4rem; */
+  }
 `;

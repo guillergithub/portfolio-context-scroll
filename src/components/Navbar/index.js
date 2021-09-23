@@ -91,7 +91,7 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
           <Icon
             trigger="click"
             path={mdiPalette}
-            color={CSS.gray}
+            color={CSS.white}
             size={1.3}
             onClick={handleColor(() => handleColor("green"))}
             className="margin-right"
@@ -100,13 +100,13 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
         </OverlayTrigger>
             <Icon
               path={mdiTranslate}
-              color={CSS.gray}
+              color={CSS.white}
               size={1.3}
               onClick={handleLenguage}
             />
             <Icon
               path={mdiClose}
-              color={CSS.gray}
+              color={CSS.white}
               size={1.3}
               onClick={handleMenu}
               as={motion.svg}
@@ -183,15 +183,15 @@ const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  <Icon path={mdiTwitter} size={1.1} color={CSS.gray} />
-                  <Icon path={mdiGithub} size={1.1} color={CSS.gray} />
-                  <Icon path={mdiYoutube} size={1.1} color={CSS.gray} />
-                  <Icon path={mdiInstagram} size={1.1} color={CSS.gray} />
+                  <Icon path={mdiTwitter} size={1.1} color={CSS.white} />
+                  <Icon path={mdiGithub} size={1.1} color={CSS.white} />
+                  <Icon path={mdiYoutube} size={1.1} color={CSS.white} />
+                  <Icon path={mdiInstagram} size={1.1} color={CSS.white} />
                 </SocialsContainer>
 
                 <motion.span
                   initial={{ opacity: "0", x: "50" }}
-                  animate={{ opacity: 1, x: 0 }}
+                  animate={{ opacity: 1, x: 0}}
                   transition={{ delay: 0.4 }}
                 >
                   Guillermo Salazar 2021

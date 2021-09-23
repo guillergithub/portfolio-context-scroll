@@ -15,7 +15,7 @@
       "headerDark": "Oscuro"
     },
     "home": {
-      "mainWelcome": "Hola Mundo!!",     
+      "mainWelcome": "¡Hola Mundo!",     
       "introducesMe": "Soy",
       "introducesDeveloper": "desarrollador Front-end."
     },
@@ -49,7 +49,7 @@
       "headerDark": "Dark"
     },
     "home": {
-      "mainWelcome": "Hello World!!",     
+      "mainWelcome": "Hello World!",     
       "introducesMe": "I'm",
       "introducesDeveloper": "a Front-End developer."
     },

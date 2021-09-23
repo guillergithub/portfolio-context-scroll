@@ -9,6 +9,7 @@ export const Button = styled.button`
   background-color: ${(props) => props.color};
   color: ${CSS.white};
   border-radius: 20px;
+  font-size: ${CSS.font_size1};
   border: none;
   transition: ${CSS.transition};
 `;
@@ -22,9 +23,7 @@ export const ContactContainer = styled.div`
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-
   display: flex;
-  /* flex-flow: column; */
   align-items: center;
   justify-content: center;
   font-size: 3rem; 
@@ -33,51 +32,96 @@ export const ContactContainer = styled.div`
 export const FormContainer = styled.form`  
   display: flex;
   flex-flow: column;  
-  width: 30%;
-  height: 380px;
+  width: 70%;  
   background: rgba(21,21,21, 0.68);
   padding: 20px;  
-  border-radius: 5px;  
-  margin-left: 30px;
+  border-radius: 5px;    
+  height: 60%;
+  margin: 0 auto;
+  ${CSS.media.phones}{
+    width: 65%;
+  }
+    ${CSS.media.tablet}{        
+      width: 50%;        
+    }
+    ${CSS.media.screen}{          
+      width: 30%;    
+      margin-left: 30px;
+    }
 `;
 
 export const GreetContainer = styled.div` 
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    justify-content: flex-start;    
-    width: 25%;
-    height: 380px;
-    margin-top: 0px;
-    margin-right: 30px;
-    padding: 20px;     
+    justify-content: flex-end;    
+    width: 80%;    
+    margin: 0 auto;    
+      ${CSS.media.screen}{                
+      width: 30%;    
+      margin: 0 auto;  
+      margin-right: 30px;
+      justify-content: flex-start;    
+
+    }
 `;
 
-export const GreetTitle = styled.h5`
+export const GreetTitle = styled.h3`
   color: ${props => props.color};
   transition: ${CSS.transition};
+  font-size: 2rem;    
+  width: 100%;
+  text-align: center;
+  ${CSS.media.phones}{
+      margin: 0 auto;
+      width:50%;
+    }
+    ${CSS.media.tablet}{      
+      width: 100%;
+      font-size: 2.6rem;
+      text-align: center;
+    }
+    ${CSS.media.screen}{            
+      font-size: 3rem;
+      line-height: 50px;
+      text-align: left;
+    }
 `;
 
 export const GreetText = styled.div`
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  color: ${CSS.white};  
+  display: none;
   margin-top: 30px;
-`;
+  ${CSS.media.screen}{
+      display: inline-block;
+    }`;
 
 export const GreetFooter = styled.div`  
-  display: flex;
+  display: none;
   flex-flow: column;
-  align-items: center;
-  padding-top: 40px;
-  span{
-    font-size: 1rem;    
-  }
-
-  svg{
-    margin: 5px 10px 0 10px;
-    &:hover{
-      cursor: pointer;
+  align-items: center;  
+  
+    span{
+      display: inline-block;
+      font-size: 1.2rem;    
+      text-align: center;    
+      width: 100%;
+      color: ${CSS.white};
     }
-  }
+    svg{
+      margin: 0px 10px 0 10px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+      ${CSS.media.screen}{
+        display: flex;        
+          width: 100%;
+          height: fit-content;
+          justify-content: flex-start;
+          margin-top: 20px;
+        }  
 `;
 
 export const GreetSocials = styled.div`
@@ -113,9 +157,13 @@ export const Overlay = styled.div`
   position: absolute;
   /* z-index: -9; */
   display: flex;
-  /* flex-flow: column; */
+  flex-flow: column;
   justify-content: center;
   align-items: center;
+  ${CSS.media.screen}{
+    flex-flow: row;
+  }
+
 `;
 
 export const TextArea = styled.textarea`

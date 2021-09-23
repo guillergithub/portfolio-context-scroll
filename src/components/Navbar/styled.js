@@ -208,6 +208,8 @@ export const FooterContainer = styled.div`
   span {
     margin-top: 20px;
     margin-bottom: 10px;
+    color: ${CSS.white};
+        
   }
 `;
 

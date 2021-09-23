@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import * as CSS from "../../utils/vars";
 
+const media = {
+  phone: "@media(min-width: 480px)",
+  tablet: "@media(min-width: 760px)",
+  screen: "@media(min-width: 1000px)",
+  LargeScreen: "@media(min-width: 1300px)",
+};
+
 export const DotsContainer = styled.div`
   display: flex;
   flex-flow: column;
@@ -11,7 +18,10 @@ export const DotsContainer = styled.div`
   top: 35%;
   right: -100px;
   width: 40px; 
-  
+  display: none;
+  ${media.tablet} {
+      display: flex;
+    }  
 `;
 
 export const Dot = styled.div`
@@ -24,5 +34,6 @@ export const Dot = styled.div`
   transform: translateX(${(props) => (!props.$transform ? "-135px" : "0px")});  
   transition: ${CSS.transition};
   -webkit-transition: ${CSS.transition};
+  
 
 `;

@@ -2,19 +2,28 @@ import { useEffect, useState, useContext } from "react";
 import LenguageContext from "../../context/Lenguage";
 import { AnimatePresence, motion } from "framer-motion";
 import { SectionContainer, SectionTitle } from "../../utils/commonEllements";
-import { BackgroundContainer, WorkContainer } from "./styled";
+import { Container, ProjectsContainer, SliderTrack, TechnologiesContainer, WorkContainer } from "./styled";
 import i18n from "../../i18n/translations.json";
-import EFMImage from "../../assets/images/efm.PNG"
+import { WorkImages } from "../../utils/images";
+
 
 const Work = ({ currentPage }) => {
 
   const { lenguage } = useContext(LenguageContext);
+  const [isVisible, setIsVisible] = useState(false);
 
-  const [ background, setBackground ] = useState('');
-  const [ isVisible, setIsVisible ] = useState(false);
+  const logos = [
+    WorkImages.bootstrap, 
+    WorkImages.express,
+    WorkImages.node,
+    WorkImages.styledComponents,
+    WorkImages.jest,
+    WorkImages.react,
+    WorkImages.flStudio,
+    WorkImages.python,
+    WorkImages.javascript
+  ]
   
-  const experience = ["Pokedex", "Emprende Facil Mujer", "Portafolio"];
-
   useEffect(() => {
     if (currentPage === 2) {
       setIsVisible(true);
@@ -22,17 +31,6 @@ const Work = ({ currentPage }) => {
       setIsVisible(false);
     }
   }, [currentPage]);
-
-  const handleBackground = (e, value) => {
-    let bg = e._targetInst.memoizedProps.value.split(' ')[0].toLowerCase();
-    console.log(bg);
-    if (bg === 'emprende') {
-      setBackground(EFMImage)
-    } else {
-      setBackground('')
-    }
-  }
-  
 
   return (
     <SectionContainer>
@@ -53,17 +51,23 @@ const Work = ({ currentPage }) => {
           </AnimatePresence>
         </SectionTitle>
       
-        
-        <BackgroundContainer bgImg={background}>
-          <ul>
-            {experience.map((elem, index) => (
-                <li key={index} value={elem} onMouseEnter={(e, value) => handleBackground(e, value)}>
-                  {`0${index+1}. ${elem}`}
-                </li>              
-                ))}
-          </ul>
+        <ProjectsContainer>
+          <Container>
 
-        </BackgroundContainer>
+          </Container>
+        </ProjectsContainer>
+
+        <TechnologiesContainer> {/* SLIDER */}
+              <SliderTrack> 
+                {logos.map((logo) => <div> <img src={logo}/></div>) }
+                    
+                    {/* =============== */}
+
+                {logos.map((logo) => <img src={logo}/>) }
+              </SliderTrack>
+              
+        </TechnologiesContainer>
+        
       </WorkContainer>
     </SectionContainer>
   );
