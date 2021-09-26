@@ -15,9 +15,8 @@ import {
 } from "./styled";
 import bgGray from "../../assets/images/bg-gray.jpg";
 import Icon from "@mdi/react";
-import { mdiGithub, mdiInstagram, mdiLinkedin, mdiSpotify, mdiTwitter, mdiYoutube } from "@mdi/js";
+import { mdiGithub, mdiInstagram, mdiLinkedin, mdiSpotify } from "@mdi/js";
 import { motion } from "framer-motion";
-import { HomeImages } from "../../utils/images";
 // import { AnimatePresence, motion } from "framer-motion";
 import * as CSS from "../../utils/vars";
 

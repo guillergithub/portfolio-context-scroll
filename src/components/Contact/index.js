@@ -21,8 +21,7 @@ import ColorContext from "../../context/Colors";
 import Icon from "@mdi/react";
 import {  
   mdiGithub,
-  mdiInstagram,    
-  mdiYoutube,
+  mdiInstagram,      
   mdiLinkedin,
   mdiSpotify
 } from "@mdi/js";

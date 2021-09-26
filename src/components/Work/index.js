@@ -5,7 +5,7 @@ import { SectionContainer, SectionTitle } from "../../utils/commonEllements";
 import { Container, ProjectsContainer, SliderTrack, TechnologiesContainer, WorkContainer } from "./styled";
 import i18n from "../../i18n/translations.json";
 import { WorkImages } from "../../utils/images";
-import bgGray from "../../assets/images/bg-gray.jpg";
+
 
 
 
