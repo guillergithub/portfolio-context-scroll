@@ -36,7 +36,7 @@ export const FormContainer = styled.form`
   background: rgba(21,21,21, 0.68);
   padding: 20px;  
   border-radius: 5px;    
-  height: 60%;
+  height: fit-content;
   margin: 0 auto;
   ${CSS.media.phones}{
     width: 65%;
@@ -171,6 +171,6 @@ export const TextArea = styled.textarea`
   padding: 7px;
   outline: none;
   height: 60px;
-  margin-top: 10px;
+  margin: 10px;
   color: ${CSS.white};
 `;

@@ -7,7 +7,6 @@ import {
   Input,
   Label,
   TextArea,
-  Button,
   ContactContainer,
   GreetContainer,
   GreetTitle,
@@ -17,14 +16,15 @@ import {
   Overlay
 } from "./styled";
 import { motion, AnimatePresence } from "framer-motion";
-import { SectionContainer, SectionTitle } from "../../utils/commonEllements";
+import {   Button, SectionContainer, SectionTitle } from "../../utils/commonEllements";
 import ColorContext from "../../context/Colors";
 import Icon from "@mdi/react";
 import {  
   mdiGithub,
   mdiInstagram,    
   mdiYoutube,
-  mdiLinkedin
+  mdiLinkedin,
+  mdiSpotify
 } from "@mdi/js";
 import * as CSS from '../../utils/vars';
 
@@ -93,10 +93,10 @@ const Contact = ({ currentPage }) => {
           <GreetFooter>
              <span>{i18n[lenguage].contact.greets.follow}</span>
             <GreetSocials>
-            <a target='_blank' rel="noreferrer" href='https://www.linkedin.com'><Icon path={mdiLinkedin} size={1.3} fill={CSS.white}/></a>
-            <a target='_blank' rel="noreferrer" href='https://www.github.com'><Icon path={mdiGithub} size={1.3} fill={CSS.white}/></a>
-            <a target='_blank' rel="noreferrer" href='https://www.youtube.com'><Icon path={mdiYoutube} size={1.3} fill={CSS.white}/></a>
-            <a target='_blank' rel="noreferrer" href='https://www.instagram.com'><Icon path={mdiInstagram} size={1.3} fill={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/guillermoesalazar'><Icon path={mdiLinkedin} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.github.com/guillergithub'><Icon path={mdiGithub} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://open.spotify.com/user/rxhbyo2u51y7xk0tbnta5ykp6'><Icon path={mdiSpotify} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.instagram.com/guillershoot'><Icon path={mdiInstagram} size={1.3} color={CSS.white}/></a>
             </GreetSocials>
           </GreetFooter>
         </GreetContainer>

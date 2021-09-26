@@ -9,7 +9,7 @@ import Home from "../src/components/Home";
 import About from "./components/About";
 import Work from "./components/Work";
 import Contact from '../src/components/Contact';
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const App = () => {
   
@@ -50,7 +50,7 @@ const App = () => {
           
           >        
 
-        <Home currentPage={currentPage} />
+        <Home handlePageChange={(page) => handleOnChange(page)}/>
         <About currentPage={currentPage} /> 
         <Work currentPage={currentPage}/>
         <Contact currentPage={currentPage}/>

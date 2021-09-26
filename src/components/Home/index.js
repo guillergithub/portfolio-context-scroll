@@ -1,26 +1,38 @@
 import { useContext } from "react";
 import LenguageContext from "../../context/Lenguage";
 import i18n from "../../i18n/translations.json";
-import { SectionContainer } from "../../utils/commonEllements";
+import { Button, SectionContainer } from "../../utils/commonEllements";
 import ColorContext from "../../context/Colors";
-import { HomeContainer, GreetingContainer, SocialsContainer, Greetings, HelloWorld, DesignContainer } from "./styled";
+import {
+  HomeContainer,
+  GreetingContainer,
+  SocialsContainer,
+  Greetings,
+  HelloWorld,
+  DesignContainer,
+  HireMeContainer,
+  MachineContainer
+} from "./styled";
 import bgGray from "../../assets/images/bg-gray.jpg";
 import Icon from "@mdi/react";
-import { mdiGithub, mdiInstagram, mdiTwitter, mdiYoutube } from "@mdi/js";
+import { mdiGithub, mdiInstagram, mdiLinkedin, mdiSpotify, mdiTwitter, mdiYoutube } from "@mdi/js";
 import { motion } from "framer-motion";
+import { HomeImages } from "../../utils/images";
 // import { AnimatePresence, motion } from "framer-motion";
+import * as CSS from "../../utils/vars";
 
-const Home = ({ currentPage }) => {
+const Home = ({ handlePageChange }) => {
   const { lenguage } = useContext(LenguageContext);
   const { color } = useContext(ColorContext);
 
   return (
     <SectionContainer>
-      <HomeContainer bgImg={bgGray}> {/* RESPONSIVE BOX MEDIA QUERYS */}
-        <GreetingContainer> 
-
-          <Greetings className="greetings">            
-            <HelloWorld style={{ color }}>{i18n[lenguage].home.mainWelcome}</HelloWorld>
+      <HomeContainer bgImg={bgGray}>                
+        <GreetingContainer>
+          <Greetings className="greetings">
+            <HelloWorld style={{ color }}>
+              {i18n[lenguage].home.mainWelcome}
+            </HelloWorld>
             <p>Me llamo</p>
             <h3 style={{ color }}>Guillermo </h3>
             <h3 style={{ color }}>Salazar </h3>
@@ -32,16 +44,61 @@ const Home = ({ currentPage }) => {
             initial={{ opacity: "0", y: "50" }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            >
-            <Icon path={mdiTwitter} size={1.1} color={CSS.purple} />
-            <Icon path={mdiGithub} size={1.1} color={CSS.white} />
-            <Icon path={mdiYoutube} size={1.1} color={CSS.white} />
-            <Icon path={mdiInstagram} size={1.1} color={CSS.white} />
+            
+          >
+            <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/guillermoesalazar'><Icon path={mdiLinkedin} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.github.com/guillergithub'><Icon path={mdiGithub} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://open.spotify.com/user/rxhbyo2u51y7xk0tbnta5ykp6'><Icon path={mdiSpotify} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.instagram.com/guillershoot'><Icon path={mdiInstagram} size={1.3} color={CSS.white}/></a>
           </SocialsContainer>
-        
         </GreetingContainer>
+        
+        <DesignContainer>          
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.0"
+            width="1024.000000pt"
+            height="768.000000pt"
+            viewBox="0 0 1024.000000 768.000000"
+            preserveAspectRatio="xMidYMid meet"
+          >
+            <g
+              transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
+              fill={color}
+              stroke="none"
+            >
+              <path d="M5230 7363 c-25 -2 -112 -10 -195 -18 -82 -9 -172 -18 -200 -21 -404 -39 -901 -207 -1300 -437 -135 -78 -285 -177 -285 -188 0 -5 -33 -31 -73 -58 -149 -100 -420 -349 -602 -552 -422 -470 -752 -1198 -856 -1889 -46 -304 -27 -759 46 -1095 65 -303 191 -633 282 -742 l23 -28 -6 30 c-3 17 -26 94 -51 173 -50 162 -53 210 -4 82 30 -77 115 -249 146 -293 27 -38 23 11 -7 94 -16 46 -52 147 -80 224 -64 178 -83 244 -124 435 -18 85 -31 130 -28 100 5 -42 3 -52 -6 -44 -14 14 -47 239 -58 406 -11 147 -6 457 7 490 6 13 10 16 10 8 1 -8 3 -111 5 -227 3 -117 7 -216 9 -220 8 -13 16 -63 27 -153 16 -140 30 -229 51 -340 23 -117 128 -460 164 -531 12 -25 30 -73 39 -105 17 -61 70 -169 93 -192 19 -20 16 -9 -17 66 -17 36 -26 68 -21 70 5 2 8 9 6 15 -2 7 -6 29 -9 49 -3 20 -28 106 -56 190 -64 196 -110 373 -109 418 l0 35 15 -40 c24 -65 60 -76 50 -15 -3 22 -2 40 3 40 14 0 31 -25 68 -102 65 -137 76 -129 51 38 -11 70 -16 129 -11 133 4 3 8 139 8 301 0 315 1 326 66 705 41 238 130 588 145 572 3 -2 -2 -35 -11 -73 -18 -83 -24 -193 -10 -195 6 -1 51 97 101 217 167 405 271 600 448 849 267 374 648 693 1081 905 718 352 1531 396 2291 125 259 -93 582 -269 794 -434 122 -94 140 -111 290 -261 155 -154 168 -169 270 -305 325 -431 516 -940 571 -1518 17 -181 7 -544 -20 -711 -91 -567 -319 -1070 -680 -1501 -398 -475 -1037 -875 -1631 -1020 -58 -14 -121 -28 -140 -31 -19 -3 -62 -12 -95 -20 l-60 -14 55 5 c200 18 518 108 770 218 285 124 570 296 773 468 173 147 227 201 412 407 56 62 212 284 273 386 164 276 279 557 367 901 l34 130 -4 -85 c-7 -167 -104 -477 -242 -770 -60 -128 -211 -379 -279 -465 -177 -220 -364 -407 -554 -551 -36 -27 -67 -51 -70 -54 -14 -15 -165 -111 -335 -215 -247 -150 -326 -188 -575 -276 -144 -52 -385 -106 -595 -135 -181 -25 -636 -26 -815 -1 -109 15 -291 50 -385 72 -16 5 -27 5 -24 2 9 -11 259 -65 379 -82 533 -75 1079 -12 1587 182 51 19 96 32 101 29 12 -7 350 164 457 231 144 90 167 96 56 15 -323 -235 -783 -432 -1161 -497 -124 -21 -135 -23 -197 -29 -29 -3 -77 -9 -105 -12 -87 -10 -455 -7 -573 5 -390 40 -766 145 -1112 311 -182 87 -415 229 -546 332 -23 18 -38 27 -33 20 10 -16 163 -130 261 -194 300 -196 659 -351 1000 -433 140 -34 147 -36 142 -41 -9 -9 -212 38 -356 82 -385 119 -664 263 -1051 541 -47 34 -86 60 -88 58 -7 -6 135 -134 196 -176 477 -325 989 -518 1547 -585 166 -19 622 -22 755 -5 239 32 501 99 750 191 47 17 117 40 155 50 69 19 70 19 45 0 -14 -11 -30 -20 -35 -20 -6 0 -46 -15 -90 -34 -180 -75 -458 -154 -670 -191 -207 -35 -270 -39 -565 -39 -266 0 -323 3 -447 22 -238 37 -492 101 -669 168 -36 13 -62 19 -58 13 5 -9 -1 -10 -22 -5 -73 18 -80 17 -41 -4 116 -64 -74 3 -253 89 -46 22 -86 38 -89 36 -2 -3 43 -27 100 -54 353 -167 718 -269 1169 -327 146 -19 513 -25 674 -11 488 41 980 201 1413 460 105 62 309 205 385 268 24 20 62 52 85 70 73 59 315 310 404 419 250 306 497 744 608 1082 13 37 27 70 32 73 22 14 -6 -86 -66 -237 -460 -1147 -1481 -1958 -2707 -2152 -245 -39 -611 -50 -853 -26 -692 67 -1343 334 -1890 775 -112 90 -366 336 -435 422 -25 30 -50 61 -55 67 -23 24 -124 161 -190 255 -38 55 -71 98 -73 96 -6 -6 94 -174 131 -220 4 -5 28 -37 53 -70 195 -256 454 -513 705 -698 571 -420 1260 -653 1990 -671 303 -8 654 32 928 105 64 17 123 32 131 34 106 24 414 146 581 230 348 175 648 392 924 669 568 571 909 1284 1005 2106 25 213 19 570 -15 820 -65 483 -204 879 -480 1363 -49 85 -18 49 51 -60 63 -101 174 -322 239 -476 15 -37 30 -66 32 -63 2 2 -1 16 -8 32 -6 16 -15 38 -19 49 -107 281 -349 683 -560 929 -145 170 -273 296 -440 436 -36 29 -87 75 -115 101 -176 167 -557 399 -856 523 -371 152 -764 229 -1149 224 -96 -1 -195 -4 -220 -5z m-2561 -1250 c-68 -76 -208 -261 -287 -379 -221 -330 -396 -719 -483 -1074 -28 -112 -38 -97 -14 22 66 336 298 819 575 1199 92 127 228 284 238 275 2 -3 -10 -22 -29 -43z m-259 -500 c-17 -32 -51 -94 -76 -138 -106 -187 -218 -447 -273 -635 -48 -165 -119 -377 -120 -357 -1 28 44 198 95 358 87 271 225 568 361 777 19 28 37 52 39 52 2 0 -9 -26 -26 -57z m-210 -2393 c6 -11 8 -20 6 -20 -3 0 -10 9 -16 20 -6 11 -8 20 -6 20 3 0 10 -9 16 -20z" />
+              <path d="M8600 5057 c0 -4 14 -46 30 -95 36 -102 103 -341 121 -427 7 -33 14 -53 16 -45 3 12 -38 188 -71 310 -27 96 -95 280 -96 257z" />
+              <path d="M8773 4415 c6 -30 12 -53 14 -51 7 6 -9 106 -17 106 -3 0 -2 -25 3 -55z" />
+              <path d="M8792 4320 c0 -19 2 -27 5 -17 2 9 2 25 0 35 -3 9 -5 1 -5 -18z" />
+              <path d="M8802 4255 c0 -16 2 -22 5 -12 2 9 2 23 0 30 -3 6 -5 -1 -5 -18z" />
+              <path d="M8813 4165 c0 -22 2 -30 4 -17 2 12 2 30 0 40 -3 9 -5 -1 -4 -23z" />
+              <path d="M8823 4050 c0 -30 2 -43 4 -27 2 15 2 39 0 55 -2 15 -4 2 -4 -28z" />
+              <path d="M8833 3840 c0 -30 2 -43 4 -27 2 15 2 39 0 55 -2 15 -4 2 -4 -28z" />
+              <path d="M1892 3360 c0 -14 2 -19 5 -12 2 6 2 18 0 25 -3 6 -5 1 -5 -13z" />
+              <path d="M1902 3280 c0 -14 2 -19 5 -12 2 6 2 18 0 25 -3 6 -5 1 -5 -13z" />
+              <path d="M3200 1386 c0 -2 8 -10 18 -17 15 -13 16 -12 3 4 -13 16 -21 21 -21 13z" />
+              <path d="M3260 1336 c0 -2 8 -10 18 -17 15 -13 16 -12 3 4 -13 16 -21 21 -21 13z" />
+              <path d="M3521 937 c2 -1 13 -9 24 -17 19 -14 19 -14 6 3 -7 9 -18 17 -24 17 -6 0 -8 -1 -6 -3z" />
+              <path d="M3590 897 c0 -7 111 -69 116 -65 2 2 -24 19 -56 37 -33 18 -60 30 -60 28z" />
+              <path d="M3800 859 c32 -21 182 -90 187 -85 6 6 -174 96 -191 96 -6 0 -4 -5 4 -11z" />
+              <path d="M4418 803 c7 -3 16 -2 19 1 4 3 -2 6 -13 5 -11 0 -14 -3 -6 -6z" />
+              <path d="M4030 750 c8 -5 20 -10 25 -10 6 0 3 5 -5 10 -8 5 -19 10 -25 10 -5 0 -3 -5 5 -10z" />
+              <path d="M5588 753 c12 -2 30 -2 40 0 9 3 -1 5 -23 4 -22 0 -30 -2 -17 -4z" />
+              <path d="M5508 743 c12 -2 30 -2 40 0 9 3 -1 5 -23 4 -22 0 -30 -2 -17 -4z" />
+              <path d="M5373 733 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z" />
+            </g>
+          </svg>
+          
+          <HireMeContainer>
+            <MachineContainer>
+              <h3>TypeMachine</h3>
+            </MachineContainer>
 
-        <DesignContainer>Otra info</DesignContainer>
+            <Button color={color} onClick={() => handlePageChange(3)}>Hire me</Button>
+          </HireMeContainer>
+          
+        </DesignContainer>
       </HomeContainer>
     </SectionContainer>
   );

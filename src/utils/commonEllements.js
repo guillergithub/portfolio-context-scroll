@@ -16,7 +16,7 @@ export const SectionTitle = styled.div`
   justify-content: center;
   transform: rotate(90deg);
   position: fixed;
-  left: -250px;
+  left: -230px;
   top: ${props => props.top * 10}%;  
   width: 600px;  
   opacity: .3;
@@ -24,11 +24,35 @@ export const SectionTitle = styled.div`
   z-index: 999;
   
   ${CSS.media.phones}{
-    display: flex;
-    font-size: 3rem;
+    
   }
 
   ${CSS.media.tablet}{
-    /* font-size: 4rem; */
+    display: flex;
+    font-size: 3rem;
   }
+`;
+
+export const Button = styled.button`  
+  min-width: 160px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: ${(props) => props.color};
+  color: ${CSS.white};
+  border-radius: 7px;
+  font-size: ${CSS.font_size1};
+  border: none;
+  transition: ${CSS.transition};
+  cursor: pointer;
+  z-index: 999999;
+   &:hover{
+    transition: ${CSS.transition};
+     box-shadow: ${CSS.shadow};
+     opacity: .8;
+   }
+`;
+
+export const ColorFont = styled.span`
+  color: ${props => props.color};
 `;

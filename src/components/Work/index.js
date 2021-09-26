@@ -5,6 +5,8 @@ import { SectionContainer, SectionTitle } from "../../utils/commonEllements";
 import { Container, ProjectsContainer, SliderTrack, TechnologiesContainer, WorkContainer } from "./styled";
 import i18n from "../../i18n/translations.json";
 import { WorkImages } from "../../utils/images";
+import bgGray from "../../assets/images/bg-gray.jpg";
+
 
 
 const Work = ({ currentPage }) => {
@@ -34,7 +36,7 @@ const Work = ({ currentPage }) => {
 
   return (
     <SectionContainer>
-      <WorkContainer>
+      <WorkContainer >
         <SectionTitle top={24.5}>
           <AnimatePresence initial={false}>
             {isVisible ? (
@@ -59,11 +61,11 @@ const Work = ({ currentPage }) => {
 
         <TechnologiesContainer> {/* SLIDER */}
               <SliderTrack> 
-                {logos.map((logo) => <div> <img src={logo}/></div>) }
+                {logos.map((logo) => <div> <img src={logo} alt='logo-tech'/></div>) }
                     
                     {/* =============== */}
 
-                {logos.map((logo) => <img src={logo}/>) }
+                {logos.map((logo) => <img src={logo} alt='tech-logo'/>) }
               </SliderTrack>
               
         </TechnologiesContainer>
