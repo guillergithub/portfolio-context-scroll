@@ -8,7 +8,7 @@ export const UpButtonContainer = styled.div`
   align-items: center;
   z-index: 9;
   position: fixed;  
-  bottom: 5px;    
+  bottom: 25px;    
   
   svg {
     cursor: pointer;

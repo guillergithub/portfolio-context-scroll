@@ -40,7 +40,7 @@ export const DesignContainer = styled.div`
     width: 50%;
     height: 70%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
   }
 `;
@@ -54,7 +54,7 @@ export const GreetingContainer = styled.div`
   padding: 0 10px;
   line-height: 60px;  
   h3 {
-    font-size: 4.5rem;
+    font-size: 4.3rem;
   }
   p {
     font-size: 2.5rem;

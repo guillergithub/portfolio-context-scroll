@@ -37,6 +37,7 @@ const App = () => {
         <Dots
           isOpen={isOpen}
           handlePageChange={(page) => setCurrentPage(page)}
+          currentPage={currentPage}
         />
         <UpButton
           currentPage={currentPage}

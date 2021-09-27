@@ -7,6 +7,7 @@ import running from '../assets/images/AboutImages/running.png';
 
 /* HOME IMAGES */
 import paintedCircle from '../assets/images/HomeImages/painted-circle.svg'
+
 /* WORK IMAGES */
 import styledComponents from '../assets/images/WorkImages/styled-components.svg';
 import python from '../assets/images/WorkImages/python.svg';
@@ -17,6 +18,9 @@ import jest from '../assets/images/WorkImages/jest.svg';
 import node from '../assets/images/WorkImages/node.svg';
 import express from '../assets/images/WorkImages/express-js.svg';
 import flStudio from '../assets/images/WorkImages/fl-studio.png';
+
+/* PROJECTS BACKGROUNDS */
+import efm from '../assets/images/efm.PNG'
 
 
 
@@ -38,6 +42,7 @@ export const WorkImages = {
   python, 
   bootstrap, 
   express,
+  efm,
   flStudio,
   javascript, 
   jest,

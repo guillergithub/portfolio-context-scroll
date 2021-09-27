@@ -24,8 +24,6 @@ import {
   StudiesWrapper,
   FlexRow,
   ButtonContainer,
-  HobbieTitle,
-  Circle,
 } from "./styled";
 import { AboutImages } from "../../utils/images";
 import bgGray from "../../assets/images/bg-gray.jpg";

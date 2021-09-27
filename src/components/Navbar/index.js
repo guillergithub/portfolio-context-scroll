@@ -19,6 +19,9 @@ import {
   ArrowUp,
   MenuLink,
   Logo,
+  NavList,
+  NavItem,
+  IconContainer,
 } from "./styled";
 import Icon from "@mdi/react";
 import {
@@ -108,6 +111,14 @@ l-163 163 -216 0 -215 0 -167 -161 c-92 -88 -167 -167 -167 -175 0 -12 40 -14
           </g>
         </svg>
       </Logo>
+
+      <NavList>
+        <NavItem color={color} onClick={() => handlePageChange(0)}>Home</NavItem>
+        <NavItem color={color} onClick={() => handlePageChange(1)}>About</NavItem>
+        <NavItem color={color} onClick={() => handlePageChange(2)}>Work</NavItem>
+        <NavItem color={color} onClick={() => handlePageChange(3)}>Conctact</NavItem>
+      </NavList>
+
       <div>
         <IconsContainer onClick={(e) => handleMenu}>
           <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
@@ -121,6 +132,7 @@ l-163 163 -216 0 -215 0 -167 -161 c-92 -88 -167 -167 -167 -175 0 -12 40 -14
               data-toggle="popover"
             />
           </OverlayTrigger>
+          <IconContainer>
           <Icon
             path={mdiTranslate}
             color={CSS.white}
@@ -128,6 +140,8 @@ l-163 163 -216 0 -215 0 -167 -161 c-92 -88 -167 -167 -167 -175 0 -12 40 -14
             onClick={handleLenguage}
             className="margin-right"
           />
+          <p>ES / EN</p>
+          </IconContainer>
           <Icon
             path={mdiMenu}
             color={CSS.white}

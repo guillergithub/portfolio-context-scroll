@@ -51,11 +51,27 @@ export const IconsContainer = styled.div`
   margin-top: ${(props) => props.mt}px;
   margin-right: 40px;  
   height: fit-content;  
+  display: flex;
   .margin-right {
     margin-right: 40px;
   }
   svg {
     cursor: pointer;
+  }
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  p{
+    position: absolute;
+    color: ${CSS.white};
+    font-size: .7rem;
+    bottom: -15px;
+    right: 34px;
   }
 `;
 
@@ -165,6 +181,27 @@ export const MenuLink = styled.span`
   cursor: pointer;
   &:hover {
     color: white;
+  }
+`;
+
+export const NavList = styled.ul`
+  display: none;
+  ${CSS.media.tablet} {
+    display: flex;
+  }
+`;
+
+export const NavItem = styled.li`
+  list-style: none;
+  margin: 0 40px;
+  color: ${CSS.white};
+  cursor: pointer;
+    transition: ${CSS.transition};
+
+  &:hover {
+    color: ${props => props.color};
+      transition: ${CSS.transition};
+
   }
 `;
 

@@ -10,6 +10,7 @@ export const AboutContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   font-size: 3rem;
+  padding: 0 10px;
   color: ${CSS.white};
   /* background: lightpink;   */
   background-image: url(${(props) => props.bgImg});

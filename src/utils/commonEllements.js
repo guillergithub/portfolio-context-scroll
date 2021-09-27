@@ -19,7 +19,7 @@ export const SectionTitle = styled.div`
   left: -230px;
   top: ${props => props.top * 10}%;  
   width: 600px;  
-  opacity: .3;
+  opacity: .2;
   color: white;
   z-index: 999;
   

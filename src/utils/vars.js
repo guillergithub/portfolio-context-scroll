@@ -15,7 +15,8 @@ export const font_size3     = '2rem';
 export const scale          = 'scale(1.09)';
 
 /* MEDIA QUERYS BREAKPOINTS */
-export const media          = {
+export const media          = { 
+                                small: "@media(min-width: 500px)", 
                                 phones: "@media(min-width: 600px)", 
                                 tablet: "@media(min-width: 760px)",
                                 screen: "@media(min-width: 1000px)"                                
