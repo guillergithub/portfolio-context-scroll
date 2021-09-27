@@ -92,7 +92,7 @@ export const Menu = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  bottom: -50vh;
+  bottom: -100vh;
   margin-right: 0;
   transform: translateY(${(props) => (!props.$transform ? "-1000px" : "0px")});
   display: flex;

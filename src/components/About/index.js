@@ -3,7 +3,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import LenguageContext from "../../context/Lenguage";
 import ColorContext from "../../context/Colors";
 import i18n from "../../i18n/translations.json";
-import { Button, ColorFont, SectionContainer, SectionTitle } from "../../utils/commonEllements";
+import {
+  Button,
+  ColorFont,
+  SectionContainer,
+  SectionTitle,
+} from "../../utils/commonEllements";
 import {
   AboutContainer,
   TopContainer,
@@ -20,16 +25,16 @@ import {
   FlexRow,
   ButtonContainer,
   HobbieTitle,
+  Circle,
 } from "./styled";
-import { AboutImages } from '../../utils/images';
+import { AboutImages } from "../../utils/images";
 import bgGray from "../../assets/images/bg-gray.jpg";
-
 
 const About = ({ currentPage }) => {
   const { lenguage } = useContext(LenguageContext);
   const { color } = useContext(ColorContext);
 
-  const [isVisible, setIsVisible] = useState(false);  
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (currentPage === 1) {
@@ -61,9 +66,16 @@ const About = ({ currentPage }) => {
         <TopContainer>
           <InfoContainer>
             <LineContainer isLeft={false} color={color} className="line">
-              <h5><ColorFont color={color}>I'm</ColorFont> <ColorFont color={color}>G</ColorFont>uillermo <ColorFont color={color}>S</ColorFont>alazar</h5>
+              <h5>
+                <ColorFont color={color}>I'm</ColorFont>{" "}
+                <ColorFont color={color}>G</ColorFont>uillermo{" "}
+                <ColorFont color={color}>S</ColorFont>alazar
+              </h5>
               <AboutText>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam impedit numquam iusto magnam aliquid porro ex</p>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quibusdam impedit numquam iusto magnam aliquid porro ex
+                </p>
               </AboutText>
               <InfoWrapper>
                 <FlexColumn>
@@ -73,17 +85,23 @@ const About = ({ currentPage }) => {
                 <FlexColumn>
                   <p>Localidad: </p>
                   <span>Medellin</span>
-                </FlexColumn>
-              </InfoWrapper>      
+                </FlexColumn>                
+              </InfoWrapper>
 
               <ButtonContainer>
-              {(lenguage === 'es') 
-                ? <a href="https://www.dropbox.com/s/t47sbcph8j82vds/Guillermo%20Salazar%20CV%202021.pdf?dl=1"><Button color={color}>Download my CV on PDF</Button></a> 
-                : <a href="https://www.dropbox.com/s/86vtmd5voydqo1h/English%20CV.pdf?dl=1"><Button color={color}>Download my CV on PDF</Button></a> 
-              }    
-              </ButtonContainer>      
+                {lenguage === "es" ? (
+                  <a href="https://www.dropbox.com/s/t47sbcph8j82vds/Guillermo%20Salazar%20CV%202021.pdf?dl=1">
+                    <Button color={color}>Download my CV on PDF</Button>
+                  </a>
+                ) : (
+                  <a href="https://www.dropbox.com/s/86vtmd5voydqo1h/English%20CV.pdf?dl=1">
+                    <Button color={color}>Download my CV on PDF</Button>
+                  </a>
+                )}
+              </ButtonContainer>
               
             </LineContainer>
+            
           </InfoContainer>
           <StudiesContainer>
             <LineContainer
@@ -96,7 +114,9 @@ const About = ({ currentPage }) => {
               <StudiesWrapper>
                 <FlexColumn>
                   <p>Academlo: </p>
-                  <span>Ciencias de la computacion desarrollador Full-Stack</span>
+                  <span>
+                    Ciencias de la computacion desarrollador Full-Stack
+                  </span>
                 </FlexColumn>
                 <FlexRow>
                   <FlexColumn>
@@ -105,20 +125,19 @@ const About = ({ currentPage }) => {
                   </FlexColumn>
                   <FlexColumn>
                     <p>English level: </p>
-                  <span>Have an conversation</span>
+                    <span>Have an conversation</span>
                   </FlexColumn>
                 </FlexRow>
               </StudiesWrapper>
-              
             </LineContainer>
           </StudiesContainer>
         </TopContainer>
 
         <HobbiesContainer>
-              <HobbieTitle style={{opacity: 0.3}}>
+          {/* <HobbieTitle style={{opacity: 0.3}}>
               <h1>Hobbies</h1>
-              </HobbieTitle>
-          
+              </HobbieTitle> */}
+
           <Container>
             <Hobbie>
               <div>
@@ -150,7 +169,6 @@ const About = ({ currentPage }) => {
               <p>Cook</p>
             </Hobbie>
           </Container>
-          
         </HobbiesContainer>
       </AboutContainer>
     </SectionContainer>
