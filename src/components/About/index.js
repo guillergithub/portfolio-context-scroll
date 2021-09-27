@@ -65,7 +65,7 @@ const About = ({ currentPage }) => {
           <InfoContainer>
             <LineContainer isLeft={false} color={color} className="line">
               <h5>
-                <ColorFont color={color}>I'm</ColorFont>{" "}
+                <ColorFont color={color}>{i18n[lenguage].home.introducesMe}</ColorFont>{" "}
                 <ColorFont color={color}>G</ColorFont>uillermo{" "}
                 <ColorFont color={color}>S</ColorFont>alazar
               </h5>
@@ -73,15 +73,17 @@ const About = ({ currentPage }) => {
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Quibusdam impedit numquam iusto magnam aliquid porro ex
+
+                  
                 </p>
               </AboutText>
               <InfoWrapper>
                 <FlexColumn>
-                  <p>Age: </p>
+                  <p>{i18n[lenguage].about.age}</p>
                   <span>30</span>
                 </FlexColumn>
                 <FlexColumn>
-                  <p>Localidad: </p>
+                  <p>{i18n[lenguage].about.locate}</p>
                   <span>Medellin</span>
                 </FlexColumn>                
               </InfoWrapper>
@@ -89,11 +91,11 @@ const About = ({ currentPage }) => {
               <ButtonContainer>
                 {lenguage === "es" ? (
                   <a href="https://www.dropbox.com/s/t47sbcph8j82vds/Guillermo%20Salazar%20CV%202021.pdf?dl=1">
-                    <Button color={color}>Download my CV on PDF</Button>
+                    <Button color={color}>{i18n[lenguage].about.downloadCV}</Button>
                   </a>
                 ) : (
                   <a href="https://www.dropbox.com/s/86vtmd5voydqo1h/English%20CV.pdf?dl=1">
-                    <Button color={color}>Download my CV on PDF</Button>
+                    <Button color={color}>{i18n[lenguage].about.downloadCV}</Button>
                   </a>
                 )}
               </ButtonContainer>
@@ -108,22 +110,22 @@ const About = ({ currentPage }) => {
               color={color}
               className="line"
             >
-              <h5>Studies</h5>
+              <h5>{i18n[lenguage].about.studies}</h5>
               <StudiesWrapper>
                 <FlexColumn>
                   <p>Academlo: </p>
                   <span>
-                    Ciencias de la computacion desarrollador Full-Stack
+                    {`${i18n[lenguage].about.academloCareer} (${i18n[lenguage].about.onProgress})`} 
                   </span>
                 </FlexColumn>
                 <FlexRow>
                   <FlexColumn>
-                    <p>University: </p>
-                    <span>Ingenieria Electronica</span>
+                    <p>{i18n[lenguage].about.university} </p>
+                    <span>{`${i18n[lenguage].about.career} (${i18n[lenguage].about.paused})`}</span>
                   </FlexColumn>
                   <FlexColumn>
-                    <p>English level: </p>
-                    <span>Have an conversation</span>
+                    <p>{i18n[lenguage].about.englishLevel}</p>
+                    <span>{i18n[lenguage].about.level}</span>
                   </FlexColumn>
                 </FlexRow>
               </StudiesWrapper>
@@ -141,14 +143,14 @@ const About = ({ currentPage }) => {
               <div>
                 <img src={AboutImages.coding} alt="Code" />
               </div>
-              <p>Code</p>
+              <p>{i18n[lenguage].about.code}</p>
             </Hobbie>
 
             <Hobbie>
               <div>
                 <img src={AboutImages.composing} alt="Music" />
               </div>
-              <p>Music</p>
+              <p>{i18n[lenguage].about.music}</p>
             </Hobbie>
           </Container>
 
@@ -157,14 +159,14 @@ const About = ({ currentPage }) => {
               <div>
                 <img src={AboutImages.running} alt="Running" />
               </div>
-              <p>Running</p>
+              <p>{i18n[lenguage].about.running}</p>
             </Hobbie>
 
             <Hobbie>
               <div>
                 <img src={AboutImages.chef} alt="Cook" />
               </div>
-              <p>Cook</p>
+              <p>{i18n[lenguage].about.cook}</p>
             </Hobbie>
           </Container>
         </HobbiesContainer>

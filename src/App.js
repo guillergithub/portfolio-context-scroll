@@ -33,6 +33,7 @@ const App = () => {
           handleMenu={handleMenu}
           isOpen={isOpen}
           handlePageChange={(page) => setCurrentPage(page)}
+          currentPage={currentPage}
         />
         <Dots
           isOpen={isOpen}

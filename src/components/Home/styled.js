@@ -92,7 +92,7 @@ export const SocialsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 40px auto;  
+  margin-bottom: 50px;  
   z-index: 999;
   svg {
     cursor: pointer;

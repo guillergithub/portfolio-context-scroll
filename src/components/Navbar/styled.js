@@ -49,8 +49,8 @@ export const ColorOptionsContainer = styled.div`
 
 export const IconsContainer = styled.div`
   margin-top: ${(props) => props.mt}px;
-  margin-right: 40px;  
-  height: fit-content;  
+  margin-right: 40px;
+  height: fit-content;
   display: flex;
   .margin-right {
     margin-right: 40px;
@@ -66,22 +66,23 @@ export const IconContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   position: relative;
-  p{
+  p {
     position: absolute;
+    width: fit-content;
     color: ${CSS.white};
-    font-size: .7rem;
+    font-size: 0.7rem;
     bottom: -15px;
-    right: 34px;
+    right: 36px;
   }
 `;
 
 export const Logo = styled.div`
   svg {
-  width: 50px;
-  height: 35px;  
-  margin-left: 40px;
-  z-index: 999;
-  cursor: pointer;
+    width: 50px;
+    height: 35px;
+    margin-left: 40px;
+    z-index: 999;
+    cursor: pointer;
   }
 `;
 
@@ -194,14 +195,14 @@ export const NavList = styled.ul`
 export const NavItem = styled.li`
   list-style: none;
   margin: 0 40px;
-  color: ${CSS.white};
+  color: ${(props) => (props.color === "white" ? CSS.white : props.color)};
   cursor: pointer;
-    transition: ${CSS.transition};
+  font-weight: 600;
+  transition: ${CSS.transition};
 
   &:hover {
-    color: ${props => props.color};
-      transition: ${CSS.transition};
-
+    color: ${(props) => props.color};
+    transition: ${CSS.transition};
   }
 `;
 

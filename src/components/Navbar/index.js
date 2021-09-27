@@ -40,7 +40,7 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
 import logo from "../../assets/images/NavImages/gs-logo.svg";
 
-const Nav = ({ handleMenu, isOpen, handlePageChange }) => {
+const Nav = ({ handleMenu, isOpen, handlePageChange, currentPage }) => {
   const { handleLenguage, lenguage } = useContext(LenguageContext);
   const { color, handleColor } = useContext(ColorContext);
 
@@ -113,10 +113,10 @@ l-163 163 -216 0 -215 0 -167 -161 c-92 -88 -167 -167 -167 -175 0 -12 40 -14
       </Logo>
 
       <NavList>
-        <NavItem color={color} onClick={() => handlePageChange(0)}>Home</NavItem>
-        <NavItem color={color} onClick={() => handlePageChange(1)}>About</NavItem>
-        <NavItem color={color} onClick={() => handlePageChange(2)}>Work</NavItem>
-        <NavItem color={color} onClick={() => handlePageChange(3)}>Conctact</NavItem>
+        <NavItem color={currentPage === 0 ? color : "white"} onClick={() => handlePageChange(0)}>{i18n[lenguage].navbar.home}</NavItem>
+        <NavItem color={currentPage === 1 ? color : "white"} onClick={() => handlePageChange(1)}>{i18n[lenguage].navbar.about}</NavItem>
+        <NavItem color={currentPage === 2 ? color : "white"} onClick={() => handlePageChange(2)}>{i18n[lenguage].navbar.work}</NavItem>
+        <NavItem color={currentPage === 3 ? color : "white"} onClick={() => handlePageChange(3)}>{i18n[lenguage].navbar.contact}</NavItem>
       </NavList>
 
       <div>

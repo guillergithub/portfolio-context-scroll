@@ -191,7 +191,7 @@ export const TechnologiesContainer = styled.div`
     transform: rotateZ(180deg);
   }
   img {
-    width: 70px;
+    width: 50px;
     height: fit-content;
     margin: 0 20px;
     transition: ${CSS.transition};

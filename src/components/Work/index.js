@@ -27,15 +27,15 @@ const Work = ({ currentPage }) => {
   const [isHover4, setIsHover4] = useState(false);
 
   const logos = [
-    WorkImages.bootstrap,
-    WorkImages.express,
-    WorkImages.node,
-    WorkImages.styledComponents,
-    WorkImages.jest,
-    WorkImages.react,
-    WorkImages.flStudio,
-    WorkImages.python,
-    WorkImages.javascript,
+    {img: WorkImages.bootstrap, name: "bootstrap"},
+    {img: WorkImages.express, name: "express"},
+    {img: WorkImages.node, name: "node"},
+    {img: WorkImages.styledComponents, name: "styled-components"},
+    {img: WorkImages.jest, name: "jest"},
+    {img: WorkImages.react, name: "react"},
+    {img: WorkImages.flStudio, name: "fl-studio"},
+    {img: WorkImages.python, name: "python"},
+    {img: WorkImages.javascript, name: "javascript"},
   ];
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const Work = ({ currentPage }) => {
         </SectionTitle>
 
         <ProjectsContainer>
-          {isVisible && (
+          {isVisible && WorkImages && (
             <>
               <ProjectWrapper align={"end"}>
                 <Project1
@@ -149,17 +149,17 @@ const Work = ({ currentPage }) => {
           {" "}
           {/* SLIDER */}
           <SliderTrack>
-            {logos.map((logo) => (
+            {logos.map((logo, i) => (
               <div>
                 {" "}
-                <img src={logo} alt="logo-tech" />
+                <img src={logo.img} alt={logo.name+"-logo"} key={logo.name} />
               </div>
             ))}
 
             {/* =============== */}
 
-            {logos.map((logo) => (
-              <img src={logo} alt="tech-logo" />
+            {logos.map((logo, i) => (
+              <img src={logo.img} alt="tech-logo" key={i}/>
             ))}
           </SliderTrack>
         </TechnologiesContainer>

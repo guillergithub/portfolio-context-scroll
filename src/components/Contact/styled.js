@@ -171,6 +171,6 @@ export const TextArea = styled.textarea`
   padding: 7px;
   outline: none;
   height: 60px;
-  margin: 10px;
+  margin: 10px 0;
   color: ${CSS.white};
 `;

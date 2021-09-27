@@ -33,10 +33,10 @@ const Home = ({ handlePageChange }) => {
             <HelloWorld style={{ color }}>
               {i18n[lenguage].home.mainWelcome}
             </HelloWorld>
-            <p>Me llamo</p>
+            <p>{i18n[lenguage].home.introducesMe}</p>
             <h3 style={{ color }}>Guillermo </h3>
             <h3 style={{ color }}>Salazar </h3>
-            <span>soy Frontend Developer</span>
+            <span>{i18n[lenguage].home.introducesDeveloper}</span>
           </Greetings>
 
           <SocialsContainer

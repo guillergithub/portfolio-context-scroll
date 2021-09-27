@@ -1,12 +1,29 @@
 {
   "es": {
+    "about": {
+      "age": "Edad:",
+      "locate": "Mi Ubicación:",
+      "studies": "Estudios",
+      "onProgress": "En progreso",
+      "paused": "Pausado",
+      "university": "Universidad:", 
+      "career": "Ingeniería Electrónica",
+      "academloCareer": "Ciencias de la computación desarrollador Full-Stack",
+      "englishLevel": "Nivel de Inglés:",
+      "level": "Podemos conversar",
+      "downloadCV": "Descarga mi CV en PDF",
+      "music": "Música",
+      "code": "Codear",
+      "running": "Trotar",
+      "cook": "Cocinar"
+    },
     "navbar": {
       "home": "Inicio",
-      "about": "Sobre mi",   
+      "about": "Sobre mí",   
       "work": "Proyectos",  
       "myMusic": "Mi Música",
       "contact": "Contacto",
-      "contactMe": "contactame"     
+      "contactMe": "contáctame"     
     },
     "config": {
       "configColorSwitcher": "Elige un color",
@@ -23,17 +40,34 @@
       "name": "Tu nombre",
       "subject": "Asunto",
       "email": "Correo",
-      "message": "Algun mensaje...",
+      "message": "Algún mensaje...",
       "send": "Enviar",
       "greets": {
-        "title": "Enviame un hola",
+        "title": "Dime hola",
         "follow": "Sigueme",
-        "text": "Siempre estoy abierto a escuchar propuestas/ideas sobre proyectos de desarrollo o... ¿tienes algun ritmo en mente? ¡¡Toquemos!!",
-        "hireMe": "Contratame"
+        "text": "Siempre estoy abierto a escuchar propuestas/ideas sobre desarrollo o... ¿Vamos por un café?",
+        "hireMe": "Contrátame"
       }
     }
   },
   "en": {
+    "about": {
+      "age": "Age:",
+      "locate": "Living in:",
+      "studies": "Studies",
+      "onProgress": "On progress",
+      "paused": "Paused",
+      "university": "University:", 
+      "career": "Electronic Engineer",
+      "academloCareer": "Computer Science Full-Stack Developer",
+      "englishLevel": "English Level:",
+      "level": "Have a conversation",
+      "downloadCV": "Download CV on PDF",
+      "music": "Make Music",
+      "code": "Code",
+      "running": "Running",
+      "cook": "Cook"
+    },
     "navbar": {
       "home": "Home",
       "about": "About",   

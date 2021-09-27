@@ -31,7 +31,7 @@ export const Dot = styled.div`
   background: ${props => props.color === "white" ? CSS.white : props.color};
   margin: 20px 0;
   cursor: pointer;
-  transform: translateX(${(props) => (!props.$transform ? "-135px" : "0px")});  
+  transform: translateX(${(props) => (!props.transform ? "-135px" : "0px")});  
   transition: ${CSS.transition};
   -webkit-transition: ${CSS.transition};
 `;
