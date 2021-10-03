@@ -17,20 +17,17 @@ import {
   InfoContainer,
   StudiesContainer,
   Hobbie,
-  LineContainer,
   FlexColumn,
   AboutText,
   InfoWrapper,
   StudiesWrapper,
   FlexRow,
   ButtonContainer,
-  HobbieTitle,
   NameContainer,
 } from "./styled";
-import { AboutImages } from "../../utils/images";
 import bgGray from "../../assets/images/bg-gray.jpg";
 import Icon from "@mdi/react";
-import { mdiChefHat, mdiGuitarElectric, mdiMusic, mdiRunFast, mdiXml } from "@mdi/js";
+import { mdiChefHat, mdiGuitarElectric, mdiRunFast, mdiXml } from "@mdi/js";
 
 const About = ({ currentPage }) => {
   const { lenguage } = useContext(LenguageContext);
