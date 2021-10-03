@@ -21,6 +21,7 @@ export const DotsContainer = styled.div`
   display: none;
   ${media.tablet} {
       display: flex;
+      z-index: 1;  
     }  
 `;
 

@@ -29,6 +29,7 @@ const Home = ({ handlePageChange }) => {
     <SectionContainer>
       <HomeContainer bgImg={bgGray}>                
         <GreetingContainer>
+
           <Greetings className="greetings">
             <HelloWorld style={{ color }}>
               {i18n[lenguage].home.mainWelcome}
@@ -86,6 +87,7 @@ const Home = ({ handlePageChange }) => {
               <path d="M5373 733 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z" />
             </g>
           </Circle>
+        
         </GreetingContainer>
         
         <DesignContainer>          
@@ -124,6 +126,7 @@ const Home = ({ handlePageChange }) => {
               <path d="M5373 733 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z" />
             </g>
           </svg>
+          
           
           <HireMeContainer>
             <MachineContainer>

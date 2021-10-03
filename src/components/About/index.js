@@ -24,9 +24,13 @@ import {
   StudiesWrapper,
   FlexRow,
   ButtonContainer,
+  HobbieTitle,
+  NameContainer,
 } from "./styled";
 import { AboutImages } from "../../utils/images";
 import bgGray from "../../assets/images/bg-gray.jpg";
+import Icon from "@mdi/react";
+import { mdiChefHat, mdiGuitarElectric, mdiMusic, mdiRunFast, mdiXml } from "@mdi/js";
 
 const About = ({ currentPage }) => {
   const { lenguage } = useContext(LenguageContext);
@@ -62,19 +66,18 @@ const About = ({ currentPage }) => {
         </SectionTitle>
 
         <TopContainer>
+          {/* ================ ABOUT ME INFO ================ */}
           <InfoContainer>
-            <LineContainer isLeft={false} color={color} className="line">
-              <h5>
-                <ColorFont color={color}>{i18n[lenguage].home.introducesMe}</ColorFont>{" "}
-                <ColorFont color={color}>G</ColorFont>uillermo{" "}
-                <ColorFont color={color}>S</ColorFont>alazar
-              </h5>
+              <NameContainer>
+                <h5>
+                  <ColorFont color={color}>{i18n[lenguage].home.introducesMe}</ColorFont>{" "}
+                  <ColorFont color={color}>G</ColorFont>uillermo{" "}
+                  <ColorFont color={color}>S</ColorFont>alazar
+                </h5>
+              </NameContainer>
               <AboutText>
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Quibusdam impedit numquam iusto magnam aliquid porro ex
-
-                  
+                {i18n[lenguage].about.aboutMe}
                 </p>
               </AboutText>
               <InfoWrapper>
@@ -98,20 +101,15 @@ const About = ({ currentPage }) => {
                     <Button color={color}>{i18n[lenguage].about.downloadCV}</Button>
                   </a>
                 )}
-              </ButtonContainer>
-              
-            </LineContainer>
+              </ButtonContainer>             
             
           </InfoContainer>
-          <StudiesContainer>
-            <LineContainer
-              isLeft={true}
-              radiusLeft={true}
-              color={color}
-              className="line"
-            >
+          
+          {/* ================ STUDIES INFO ================ */}
+          <StudiesContainer>  
               <h5>{i18n[lenguage].about.studies}</h5>
-              <StudiesWrapper>
+
+              <StudiesWrapper>                
                 <FlexColumn>
                   <p>Academlo: </p>
                   <span>
@@ -129,43 +127,65 @@ const About = ({ currentPage }) => {
                   </FlexColumn>
                 </FlexRow>
               </StudiesWrapper>
-            </LineContainer>
           </StudiesContainer>
+
         </TopContainer>
 
         <HobbiesContainer>
-          {/* <HobbieTitle style={{opacity: 0.3}}>
-              <h1>Hobbies</h1>
+              {/* <HobbieTitle style={{opacity: 0.3}}>
+                <AnimatePresence initial={false}>
+                  {isVisible ? (
+                    <motion.h3
+                      initial={{ letterSpacing: "normal" }}
+                      animate={{ letterSpacing: "5rem" }}
+                      exit={{ letterSpacing: "normal" }}
+                    >
+                      <h3>{i18n[lenguage].about.hobbies}</h3>
+                    </motion.h3>
+                  ) : (
+                    <h3>{i18n[lenguage].about.hobbies}</h3>
+                  )}
+                </AnimatePresence>
               </HobbieTitle> */}
 
           <Container>
             <Hobbie>
-              <div>
-                <img src={AboutImages.coding} alt="Code" />
-              </div>
+                <Icon 
+                path={mdiXml}
+                size={2}
+                color={'white'}
+                />
               <p>{i18n[lenguage].about.code}</p>
             </Hobbie>
 
             <Hobbie>
-              <div>
-                <img src={AboutImages.composing} alt="Music" />
-              </div>
+              {/* <div> */}
+              <Icon 
+                path={mdiGuitarElectric}
+                size={2}
+                color={'white'}
+                />
+              {/* </div> */}
               <p>{i18n[lenguage].about.music}</p>
             </Hobbie>
           </Container>
 
           <Container>
             <Hobbie>
-              <div>
-                <img src={AboutImages.running} alt="Running" />
-              </div>
+              <Icon 
+                  path={mdiRunFast}
+                  size={2}
+                  color={'white'}
+                  />
               <p>{i18n[lenguage].about.running}</p>
             </Hobbie>
 
             <Hobbie>
-              <div>
-                <img src={AboutImages.chef} alt="Cook" />
-              </div>
+              <Icon 
+                  path={mdiChefHat}
+                  size={2}
+                  color={'white'}
+                  />
               <p>{i18n[lenguage].about.cook}</p>
             </Hobbie>
           </Container>

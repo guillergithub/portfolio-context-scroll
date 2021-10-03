@@ -1,6 +1,7 @@
 {
   "es": {
     "about": {
+      "aboutMe": "Desarrollador y músico compositor. Altamente motivado y centrado en el cumplimiento de mis metas y actividades. Tengo habilidades de trabajo en equipo y comunicación asertiva. Apasionado por el desarrollo de Software y la composición músical.",
       "age": "Edad:",
       "locate": "Mi Ubicación:",
       "studies": "Estudios",
@@ -12,10 +13,11 @@
       "englishLevel": "Nivel de Inglés:",
       "level": "Podemos conversar",
       "downloadCV": "Descarga mi CV en PDF",
-      "music": "Música",
+      "music": "Hacer Música",
       "code": "Codear",
       "running": "Trotar",
-      "cook": "Cocinar"
+      "cook": "Cocinar",
+      "hobbies": "Hobbies"
     },
     "navbar": {
       "home": "Inicio",
@@ -52,6 +54,7 @@
   },
   "en": {
     "about": {
+      "aboutMe": "Developer and musician. Highly motivaded and focused on the acomplishment of my goals and activities. I have team-work abilties and assertive comunication. I'm passionate about Software developer and music composer.",
       "age": "Age:",
       "locate": "Living in:",
       "studies": "Studies",

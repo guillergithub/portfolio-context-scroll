@@ -1,13 +1,6 @@
 import styled from "styled-components";
 import * as CSS from "../../utils/vars";
 
-// const media = {
-//   phone: "@media(min-width: 480px)",
-//   tablet: "@media(min-width: 760px)",
-//   screen: "@media(min-width: 1000px)",
-//   LargeScreen: "@media(min-width: 1300px)",
-// };
-
 export const Circle = styled.svg`
   height: 135%;
   width: 135%;
@@ -25,14 +18,14 @@ export const Circle = styled.svg`
 
 export const DesignContainer = styled.div`
   display: none;
-  svg {
+svg {
     height: 135%;
-    width: 135%;
+    width: 175%;
     position: absolute;
     left: 130px;
     top: 0px;
     animation: 50s ${CSS.rotate} linear infinite;
-    path {
+  path {
       transition: ${CSS.transition};
     }
   }
@@ -42,6 +35,10 @@ export const DesignContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5%;
+    svg {
+      width: 135%;
+    }
   }
 `;
 
@@ -51,8 +48,8 @@ export const GreetingContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  padding: 0 10px;
-  line-height: 60px;  
+  padding: 0 10px;  
+  line-height: 60px;    
   h3 {
     font-size: 4.3rem;
   }
@@ -70,33 +67,12 @@ export const GreetingContainer = styled.div`
   }
   ${CSS.media.phone} {
     // a partir de 480 sera salmon
-    /* background: lightsalmon; */
+    
   }
   ${CSS.media.tablet} {    
     width: 50%;
+    margin-top: 5%;
     /* background: lightgreen; */
-  }
-`;
-
-export const HireMeContainer = styled.div`
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  h3 {
-    margin-bottom: 150px;
-  }
-`;
-
-export const SocialsContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 50px;  
-  z-index: 999;
-  svg {
-    cursor: pointer;
-    margin: auto 15px;
   }
 `;
 
@@ -107,8 +83,8 @@ z-index: 999;
   }
 `;  
 
+
 export const HelloWorld = styled.div`
-  margin-bottom: 30px;
   font-size: 4.5rem;
   font-weight: 600;
   width: 100%;
@@ -125,25 +101,35 @@ export const HomeContainer = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-start;
   /* overflow: hidden; */
   position: relative;
+`;
+
+export const HireMeContainer = styled.div`
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    margin-bottom: 150px;
+  }
+`;
+
+export const SocialsContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 999;
+  svg {
+    cursor: pointer;
+    margin: auto 15px;
+  }
 `;
 
 export const MachineContainer = styled.div`
   h3 {
     color: ${CSS.white};
   }
-`;
-
-export const SectionTitle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(90deg);
-  position: absolute;
-  left: -50px;
-  top: ${(props) => props.top * 10}%;
-  font-size: 4rem;
 `;

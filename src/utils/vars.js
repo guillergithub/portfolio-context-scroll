@@ -11,7 +11,8 @@ export const transition     = 'all 0.4s';
 export const space_top      = '30px';
 export const font_size1     = '1rem';
 export const font_size2     = '1.6rem';
-export const font_size3     = '2rem';
+export const font_size3     = '2.3rem';
+export const font_title     = '3.5rem';
 export const scale          = 'scale(1.09)';
 
 /* MEDIA QUERYS BREAKPOINTS */

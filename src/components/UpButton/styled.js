@@ -6,7 +6,7 @@ export const UpButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9;
+  z-index: 1;
   position: fixed;  
   bottom: 25px;    
   

@@ -79,7 +79,7 @@ const Work = ({ currentPage }) => {
                 >
                   <ProjectBg bgImg={WorkImages.efm}>
                     {isHover1 && (
-                      <ProjectDescriptionContainer>
+                      <ProjectDescriptionContainer className="child">
                         <p>Emprende Facil Mujer</p>
                         <span>Frontend Developer</span>
                       </ProjectDescriptionContainer>
@@ -97,7 +97,7 @@ const Work = ({ currentPage }) => {
                 >
                   <ProjectBg bgImg={WorkImages.efm}>
                     {isHover2 && (
-                      <ProjectDescriptionContainer>
+                      <ProjectDescriptionContainer className="child">
                         2
                       </ProjectDescriptionContainer>
                     )}
@@ -116,7 +116,7 @@ const Work = ({ currentPage }) => {
                 >
                   <ProjectBg bgImg={WorkImages.efm}>
                     {isHover3 && (
-                      <ProjectDescriptionContainer>
+                      <ProjectDescriptionContainer className="child">
                         3
                       </ProjectDescriptionContainer>
                     )}
@@ -133,7 +133,7 @@ const Work = ({ currentPage }) => {
                 >
                   <ProjectBg bgImg={WorkImages.efm}>
                     {isHover4 && (
-                      <ProjectDescriptionContainer>
+                      <ProjectDescriptionContainer className="child">
                         4
                       </ProjectDescriptionContainer>
                     )}
@@ -150,7 +150,7 @@ const Work = ({ currentPage }) => {
           {/* SLIDER */}
           <SliderTrack>
             {logos.map((logo, i) => (
-              <div>
+              <div key={i}>
                 {" "}
                 <img src={logo.img} alt={logo.name+"-logo"} key={logo.name} />
               </div>

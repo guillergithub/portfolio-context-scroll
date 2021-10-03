@@ -9,7 +9,6 @@ export const AboutContainer = styled.div`
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  font-size: 3rem;
   padding: 0 10px;
   color: ${CSS.white};
   /* background: lightpink;   */
@@ -21,6 +20,7 @@ export const AboutContainer = styled.div`
 
 export const AboutText = styled.div`
   font-size: 1rem;
+  width: 80%;
 `;
 
 export const ButtonContainer = styled.div`
@@ -28,51 +28,30 @@ export const ButtonContainer = styled.div`
   height: fit-content;
   display: flex;
   justify-content: center;
+  margin: 20px auto;
 `;
-
-// export const Circle = styled.svg`
-//   height: 135%;
-//   width: 40%;
-//   position: absolute;
-//   opacity: .7;
-//   /* left: 130px;
-//   top: 200px; */
-//   animation: 8s ${CSS.rotate} linear infinite;
-//   path {
-//     transition: ${CSS.transition};
-//   }
-//      ${CSS.media.tablet} {
-//       /* top: 1200px; */
-//     }
-// `;
 
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  ${CSS.media.tablet} {
-  }
 `;
 
 export const Hobbie = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-  width: 80px;
-  height: 70px;
+  flex-direction: column;  
   transition: ${CSS.transition};
   border-radius: 5px;
-  margin-top: 30px;
   z-index: 999;
   &:hover {
     transform: ${CSS.scale};
     transition: ${CSS.transition};
-    box-shadow: ${CSS.shadow};
   }
   div {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     img {
@@ -81,23 +60,69 @@ export const Hobbie = styled.div`
     }
   }
   p {
-    font-size: 1rem;
+    font-size: ${CSS.font_size2};
+    margin-top: 10px;
+  }
+`;
+
+export const HobbiesContainer = styled.div`
+  width: 100%;
+  height: 40vh;
+  display: none;
+  justify-content: center;
+  ${CSS.media.tablet} {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    width: 80%;
+    height: 30vh;
+    justify-content: center;
+  }
+`;
+
+export const HobbieTitle = styled.div`
+  position: absolute;
+  top: -60px;
+  opacity: 0.2;
+  h3 {
+    font-size: ${CSS.font_title};
   }
 `;
 
 export const InfoContainer = styled.div`
-  width: 50%;
-  height: 300px;
+  width: 100%;  
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
+  z-index: 999;
+  div {
+    text-align: left;
+    width: 90%;
+  }
   h5 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: ${CSS.white};
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    color: ${CSS.white};   
+  }
+  p{ 
+    line-height: 25px;
+    font-size: 15px;
+   }
+`;
+
+export const InfoWrapper = styled.div`
+  display: none;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+  ${CSS.media.tablet} {
+    display: flex;
   }
 `;
+
 export const LineContainer = styled.div`
   border-top-right-radius: ${(props) => props.radiusLeft && "10px"};
   display: flex;
@@ -105,7 +130,7 @@ export const LineContainer = styled.div`
   align-items: flex-start;
   flex-flow: column;
   height: 100%;
-  width: 100%;
+  width: 60%;
   text-align: left;
   padding: 20px 20px 0 20px;
   ${CSS.media.tablet} {
@@ -118,60 +143,37 @@ export const LineContainer = styled.div`
 `;
 
 export const StudiesContainer = styled.div`
-  width: 50%;
-  height: 300px;
+  width: 100%;  
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  z-index: 999;
-  h5 {
-    font-size: 2rem;
-    margin: 0 auto;
-    color: ${CSS.white};
-  }
-  p {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  span {
-    display: inline-block;
-    font-size: 1rem;
-    margin-bottom: 20px;
-  }
-`;
-
-export const HobbiesContainer = styled.div`
-  width: 100%;
-  height: 40vh;
-  display: none;
   justify-content: flex-start;
-  align-items: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   flex-direction: column;
-
-  ${CSS.media.tablet} {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    height: 30vh;
-    justify-content: center;
+  z-index: 999;  
+  h5 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    color: ${CSS.white};   
   }
-`;
-
-export const HobbieTitle = styled.div`
-  position: absolute;
-  opacity: 0.2;
+  p{ 
+    line-height: 25px;
+    font-size: 15px;
+   }
 `;
 
 export const TopContainer = styled.div`
   width: 100%;
   height: 60vh;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 70px;
+  padding-top: 3%;
   ${CSS.media.tablet} {
     flex-direction: row;
     width: 80%;
     height: 70vh;
+    margin-top: 90px;
   }
 `;
 
@@ -200,17 +202,20 @@ export const FlexColumn = styled.div`
   }
 `;
 
-export const InfoWrapper = styled.div`
-  display: none;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: 10px;
-  ${CSS.media.tablet} {
-    display: flex;
+export const NameContainer = styled.div`
+  span {
+    font-size: ${CSS.font_size3};
+  }
+  h5 {
+    margin-bottom: 20px;
+    
   }
 `;
 
 export const StudiesWrapper = styled.div`
   display: flex;
   flex-direction: column;
+   h5 {
+    margin: 20px;
+  }
 `;

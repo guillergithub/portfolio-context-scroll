@@ -49,7 +49,7 @@ export const ColorOptionsContainer = styled.div`
 
 export const IconsContainer = styled.div`
   margin-top: ${(props) => props.mt}px;
-  margin-right: 40px;
+  margin-right: 20px;
   height: fit-content;
   display: flex;
   .margin-right {
@@ -57,6 +57,10 @@ export const IconsContainer = styled.div`
   }
   svg {
     cursor: pointer;
+  }
+
+  ${CSS.media.tablet} {
+    margin-right: 40px;
   }
 `;
 
@@ -170,7 +174,7 @@ export const MenuList = styled.ul`
 export const MenuItem = styled.li`
   list-style: none;
   margin: 0 0 30px 50px;
-  font-size: 2rem;
+  font-size: 2rem;  
 `;
 
 export const MenuLink = styled.span`
@@ -180,6 +184,8 @@ export const MenuLink = styled.span`
   transition: ${CSS.transition};
   -webkit-transition: ${CSS.transition};
   cursor: pointer;
+  font-size: ${CSS.font_size2};
+  font-weight: bold;
   &:hover {
     color: white;
   }
@@ -198,7 +204,7 @@ export const NavItem = styled.li`
   color: ${(props) => (props.color === "white" ? CSS.white : props.color)};
   cursor: pointer;
   font-weight: 600;
-  transition: ${CSS.transition};
+  transition: ${CSS.transition};  
 
   &:hover {
     color: ${(props) => props.color};

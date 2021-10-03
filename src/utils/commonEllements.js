@@ -24,6 +24,9 @@ export const SectionTitle = styled.div`
   z-index: 999;
   
   ${CSS.media.phones}{
+    h3 {
+       font-size: ${CSS.font_title};
+    }
     
   }
 
