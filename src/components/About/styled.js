@@ -60,7 +60,7 @@ export const Hobbie = styled.div`
     }
   }
   p {
-    font-size: ${CSS.font_size2};
+    font-size: ${CSS.font_size1};
     margin-top: 10px;
   }
 `;
