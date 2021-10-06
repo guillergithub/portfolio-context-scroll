@@ -155,22 +155,23 @@ const Home = ({ handlePageChange }) => {
           </svg>
 
           <HireMeContainer>
-              <p> {i18n[lenguage].home.introducesMe} </p>
+            <p> {i18n[lenguage].home.introducesMe} </p>
             <MachineContainer>
-
-              <Typewriter                
+              <Typewriter
                 options={{
-                  strings: [i18n[lenguage].home.developer, i18n[lenguage].home.musician, i18n[lenguage].home.pizza, i18n[lenguage].home.runner],
+                  strings: [
+                    i18n[lenguage].home.developer,
+                    i18n[lenguage].home.musician,
+                    i18n[lenguage].home.pizza,
+                    i18n[lenguage].home.runner,
+                  ],
                   autoStart: true,
                   loop: true,
-                  cursorClassName: 'typewritter',
-                  wrapperClassName: 'typewritter'
+                  cursorClassName: "typewritter",
+                  wrapperClassName: "typewritter",
                 }}
                 onInit={(typewriter) => {
-                  typewriter                    
-                    .pauseFor(2500)
-                    .deleteAll()                    
-                    .start();
+                  typewriter.pauseFor(2500).deleteAll().start();
                 }}
               />
             </MachineContainer>

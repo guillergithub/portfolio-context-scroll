@@ -140,7 +140,7 @@ const Work = ({ currentPage, handlePageChange }) => {
                   </a>
                 </Project3>
                 <a
-                  href="https://gslzr.netlify.app/"
+                  href="http://pocket-dex.netlify.app/"
                   target="_blank"
                   rel="noreferrer"
                 >

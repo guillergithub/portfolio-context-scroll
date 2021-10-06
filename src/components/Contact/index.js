@@ -5,7 +5,6 @@ import emailjs from "emailjs-com";
 import {
   FormContainer,
   Input,
-  Label,
   TextArea,
   ContactContainer,
   GreetContainer,
@@ -87,7 +86,6 @@ const Contact = ({ currentPage }) => {
         <GreetContainer>
           <GreetTitle color={color}>{i18n[lenguage].contact.greets.title}</GreetTitle>
           <GreetText> {i18n[lenguage].contact.greets.text}</GreetText>          
-          {/* <GreetText> <span>{i18n[lenguage].contact.hireMe}</span></GreetText>           */}
           
           <GreetFooter>
              <span>{i18n[lenguage].contact.greets.follow}</span>
@@ -102,14 +100,10 @@ const Contact = ({ currentPage }) => {
 
         
         <FormContainer onSubmit={sendEmail}>               
-          <Label >{i18n[lenguage].contact.name}</Label>
-          <Input name="name" />
-          <Label >{i18n[lenguage].contact.subject}</Label>
-          <Input name="subject" />
-          <Label >{i18n[lenguage].contact.email}</Label>
-          <Input name="email" />
-          <Label >{i18n[lenguage].contact.message}</Label>
-          <TextArea name="message" />
+          <Input name="name" placeholder={i18n[lenguage].contact.name}/>
+          <Input name="subject" placeholder={i18n[lenguage].contact.subject}/>
+          <Input name="email" placeholder={i18n[lenguage].contact.email}/>
+          <TextArea name="message" placeholder={i18n[lenguage].contact.message}/>
           <Button color={color} type="submit">
             {i18n[lenguage].contact.send}
           </Button>

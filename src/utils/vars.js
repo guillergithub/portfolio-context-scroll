@@ -1,11 +1,12 @@
 import { keyframes } from "styled-components";
 export const gray           = '#212121';
-export const purple         = '#a21676';
-export const yellow         = '#FFCB47';
-export const orange         = '#FF9900'; 
-export const blue           = 'blue'; 
-export const green          = '#66E1B4';
+export const purple         = '#ff0178';
+export const yellow         = '#FFCC33';
+export const orange         = '#FE5D26'; 
+export const blue           = '#09AEA6'; 
+export const green          = '#059E33';
 export const white          = '#f6f2f2';
+export const red            = '#CB0101';
 export const shadow         = `3px 5px 5px ${gray}`;
 export const transition     = 'all 0.4s';
 export const space_top      = '30px';

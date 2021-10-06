@@ -5,10 +5,10 @@ import * as CSS from '../utils/vars';
 
        const ColorProvider = ({ children }) => {
          
-        const [ color, setColor ] = useState('purple');
+        const [ color, setColor ] = useState(CSS.blue);
 
         const handleColor = (color) => {
-          if (color === 'gray') setColor(CSS.gray);
+          if (color === 'red') setColor(CSS.red);
           if (color === 'purple') setColor(CSS.purple);
           if (color === 'yellow') setColor(CSS.yellow);
           if (color === 'orange') setColor(CSS.orange);

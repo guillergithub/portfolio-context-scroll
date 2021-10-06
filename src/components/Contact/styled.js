@@ -34,13 +34,14 @@ export const FormContainer = styled.form`
   flex-flow: column;  
   width: 70%;  
   background: rgba(21,21,21, 0.68);
-  padding: 20px;  
+  padding: 50px;  
   border-radius: 5px;    
   height: fit-content;
-  margin: 0 auto;
-  ${CSS.media.phones}{
-    width: 65%;
-  }
+  margin: 0 auto;  
+
+    ${CSS.media.phones}{
+      width: 65%;
+    }
     ${CSS.media.tablet}{        
       width: 50%;        
     }
@@ -89,10 +90,10 @@ export const GreetTitle = styled.h3`
 `;
 
 export const GreetText = styled.div`
-  font-size: 1.2rem;
+  font-size: ${CSS.font_size2};
   color: ${CSS.white};  
   display: none;
-  margin-top: 30px;
+  margin-top: 10px;
   ${CSS.media.screen}{
       display: inline-block;
     }`;
@@ -101,8 +102,8 @@ export const GreetFooter = styled.div`
   display: none;
   flex-flow: column;
   align-items: center;  
-  
-    span{
+  span{
+      margin-top: 30px;
       display: inline-block;
       font-size: 1.2rem;    
       text-align: center;    
@@ -128,6 +129,7 @@ export const GreetSocials = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
     a{
       text-decoration: none;
       color: ${CSS.gray};
@@ -139,8 +141,10 @@ export const Input = styled.input`
   border: none;
   border-bottom: solid 1px ${CSS.white};
   background: none;
-  padding-left: 3px;
+  padding: 5px;
   color: ${CSS.white};
+  margin: 20px auto;
+  width: 96%;
 `;
 
 export const Label = styled.label`
@@ -172,5 +176,6 @@ export const TextArea = styled.textarea`
   outline: none;
   height: 60px;
   margin: 10px 0;
+  border: 1px solid ${CSS.white};
   color: ${CSS.white};
 `;

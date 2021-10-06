@@ -31,8 +31,8 @@ import {
   mdiMenu,
   mdiPalette,
   mdiTranslate,
-  mdiTwitter,
-  mdiYoutube,
+  mdiSpotify, 
+  mdiLinkedin
 } from "@mdi/js";
 import * as CSS from "../../utils/vars";
 import i18n from "../../i18n/translations.json";
@@ -53,7 +53,7 @@ const Nav = ({ handleMenu, isOpen, handlePageChange, currentPage }) => {
       <PopBody>
         <Popover.Body>
           <ColorOptionsContainer>
-            <ColorOption color={CSS.gray} onClick={() => handleColor("gray")} />
+            <ColorOption color={CSS.red} onClick={() => handleColor("red")} />
             <ColorOption color={CSS.blue} onClick={() => handleColor("blue")} />
             <ColorOption
               color={CSS.green}
@@ -260,10 +260,10 @@ l-163 163 -216 0 -215 0 -167 -161 c-92 -88 -167 -167 -167 -175 0 -12 40 -14
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4 }}
                   >
-                    <Icon path={mdiTwitter} size={1.1} color={CSS.white} />
-                    <Icon path={mdiGithub} size={1.1} color={CSS.white} />
-                    <Icon path={mdiYoutube} size={1.1} color={CSS.white} />
-                    <Icon path={mdiInstagram} size={1.1} color={CSS.white} />
+                   <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/guillermoesalazar'><Icon path={mdiLinkedin} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.github.com/guillergithub'><Icon path={mdiGithub} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://open.spotify.com/user/rxhbyo2u51y7xk0tbnta5ykp6'><Icon path={mdiSpotify} size={1.3} color={CSS.white}/></a>
+            <a target='_blank' rel="noreferrer" href='https://www.instagram.com/guillershoot'><Icon path={mdiInstagram} size={1.3} color={CSS.white}/></a>
                   </SocialsContainer>
 
                   <motion.span
