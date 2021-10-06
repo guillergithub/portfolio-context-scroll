@@ -18,7 +18,7 @@ import {
 import i18n from "../../i18n/translations.json";
 import { WorkImages } from "../../utils/images";
 
-const Work = ({ currentPage }) => {
+const Work = ({ currentPage, handlePageChange }) => {
   const { lenguage } = useContext(LenguageContext);
   const [isVisible, setIsVisible] = useState(false);
   const [isHover1, setIsHover1] = useState(false);
@@ -27,15 +27,18 @@ const Work = ({ currentPage }) => {
   const [isHover4, setIsHover4] = useState(false);
 
   const logos = [
-    {img: WorkImages.bootstrap, name: "bootstrap"},
-    {img: WorkImages.express, name: "express"},
-    {img: WorkImages.node, name: "node"},
-    {img: WorkImages.styledComponents, name: "styled-components"},
-    {img: WorkImages.jest, name: "jest"},
-    {img: WorkImages.react, name: "react"},
-    {img: WorkImages.flStudio, name: "fl-studio"},
-    {img: WorkImages.python, name: "python"},
-    {img: WorkImages.javascript, name: "javascript"},
+    { img: WorkImages.bootstrap, name: "bootstrap" },
+    { img: WorkImages.express, name: "express" },
+    { img: WorkImages.node, name: "node" },
+    { img: WorkImages.styledComponents, name: "styled-components" },
+    { img: WorkImages.jest, name: "jest" },
+    { img: WorkImages.react, name: "react" },
+    { img: WorkImages.flStudio, name: "fl-studio" },
+    { img: WorkImages.python, name: "python" },
+    { img: WorkImages.javascript, name: "javascript" },
+    { img: WorkImages.express, name: "express" },
+    { img: WorkImages.node, name: "node" },
+    // { img: WorkImages.styledComponents, name: "styled-components" },
   ];
 
   useEffect(() => {
@@ -79,14 +82,20 @@ const Work = ({ currentPage }) => {
                 >
                   <ProjectBg bgImg={WorkImages.efm}>
                     {isHover1 && (
-                      <ProjectDescriptionContainer className="child">
-                        <p>Emprende Facil Mujer</p>
-                        <span>Frontend Developer</span>
-                      </ProjectDescriptionContainer>
+                      <a
+                        href="https://efm.emprendefacilmujer.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <ProjectDescriptionContainer className="child">
+                          <p>Emprende Fácil Mujer </p>
+                          <span>React.js {i18n[lenguage].config.building}</span>
+                        </ProjectDescriptionContainer>
+                      </a>
                     )}
-                    
                   </ProjectBg>
                 </Project1>
+
                 <Project2
                   as={motion.div}
                   animate={{ x: 0 }}
@@ -95,16 +104,17 @@ const Work = ({ currentPage }) => {
                   onMouseEnter={() => setIsHover2(!isHover2)}
                   onMouseLeave={() => setIsHover2(!isHover2)}
                 >
-                  <ProjectBg bgImg={WorkImages.efm}>
-                    {isHover2 && (
-                      <ProjectDescriptionContainer className="child">
-                        2
-                      </ProjectDescriptionContainer>
-                    )}
-                    
+                  <ProjectBg bgImg={WorkImages.portfolio}>
+                      {isHover2 && (
+                        <ProjectDescriptionContainer className="child" onClick={() => handlePageChange(0)}>
+                          <p>My Portfolio</p>
+                          <span>React.js</span>
+                        </ProjectDescriptionContainer>
+                      )}
                   </ProjectBg>
                 </Project2>
               </ProjectWrapper>
+
               <ProjectWrapper align={"start"}>
                 <Project3
                   as={motion.div}
@@ -114,32 +124,44 @@ const Work = ({ currentPage }) => {
                   onMouseEnter={() => setIsHover3(!isHover3)}
                   onMouseLeave={() => setIsHover3(!isHover3)}
                 >
-                  <ProjectBg bgImg={WorkImages.efm}>
-                    {isHover3 && (
-                      <ProjectDescriptionContainer className="child">
-                        3
-                      </ProjectDescriptionContainer>
-                    )}
-                    
-                  </ProjectBg>
+                  <a
+                    href="https://quiz-it-app.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <ProjectBg bgImg={WorkImages.quiz}>
+                      {isHover3 && (
+                        <ProjectDescriptionContainer className="child">
+                          <p>Quiz-it</p>
+                          <span>Vanilla JS</span>
+                        </ProjectDescriptionContainer>
+                      )}
+                    </ProjectBg>
+                  </a>
                 </Project3>
-                <Project4
-                  as={motion.div}
-                  animate={{ x: 0 }}
-                  initial={{ x: "-500px" }}
-                  transition={{ delay: 0 }}
-                  onMouseEnter={() => setIsHover4(!isHover4)}
-                  onMouseLeave={() => setIsHover4(!isHover4)}
+                <a
+                  href="https://gslzr.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  <ProjectBg bgImg={WorkImages.efm}>
-                    {isHover4 && (
-                      <ProjectDescriptionContainer className="child">
-                        4
-                      </ProjectDescriptionContainer>
-                    )}
-                    
-                  </ProjectBg>{" "}
-                </Project4>
+                  <Project4
+                    as={motion.div}
+                    animate={{ x: 0 }}
+                    initial={{ x: "-500px" }}
+                    transition={{ delay: 0 }}
+                    onMouseEnter={() => setIsHover4(!isHover4)}
+                    onMouseLeave={() => setIsHover4(!isHover4)}
+                  >
+                    <ProjectBg bgImg={WorkImages.pocketdex}>
+                      {isHover4 && (
+                        <ProjectDescriptionContainer className="child">
+                          <p>Pocket-dex</p>
+                          <span>React.js</span>
+                        </ProjectDescriptionContainer>
+                      )}
+                    </ProjectBg>{" "}
+                  </Project4>
+                </a>
               </ProjectWrapper>
             </>
           )}
@@ -152,14 +174,14 @@ const Work = ({ currentPage }) => {
             {logos.map((logo, i) => (
               <div key={i}>
                 {" "}
-                <img src={logo.img} alt={logo.name+"-logo"} key={logo.name} />
+                <img src={logo.img} alt={logo.name + "-logo"} key={logo.name} />
               </div>
             ))}
 
             {/* =============== */}
 
             {logos.map((logo, i) => (
-              <img src={logo.img} alt="tech-logo" key={i}/>
+              <img src={logo.img} alt="tech-logo" key={i} />
             ))}
           </SliderTrack>
         </TechnologiesContainer>

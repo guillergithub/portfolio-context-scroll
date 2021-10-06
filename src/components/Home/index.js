@@ -12,7 +12,7 @@ import {
   DesignContainer,
   HireMeContainer,
   MachineContainer,
-  Circle
+  Circle,
 } from "./styled";
 import bgGray from "../../assets/images/bg-gray.jpg";
 import Icon from "@mdi/react";
@@ -20,6 +20,7 @@ import { mdiGithub, mdiInstagram, mdiLinkedin, mdiSpotify } from "@mdi/js";
 import { motion } from "framer-motion";
 // import { AnimatePresence, motion } from "framer-motion";
 import * as CSS from "../../utils/vars";
+import Typewriter from "typewriter-effect";
 
 const Home = ({ handlePageChange }) => {
   const { lenguage } = useContext(LenguageContext);
@@ -27,9 +28,8 @@ const Home = ({ handlePageChange }) => {
 
   return (
     <SectionContainer>
-      <HomeContainer bgImg={bgGray}>                
+      <HomeContainer bgImg={bgGray}>
         <GreetingContainer>
-
           <Greetings className="greetings">
             <HelloWorld style={{ color }}>
               {i18n[lenguage].home.mainWelcome}
@@ -45,12 +45,40 @@ const Home = ({ handlePageChange }) => {
             initial={{ opacity: "0", y: "50" }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            
           >
-            <a target='_blank' rel="noreferrer" href='https://www.linkedin.com/in/guillermoesalazar'><Icon path={mdiLinkedin} size={1.3} color={CSS.white}/></a>
-            <a target='_blank' rel="noreferrer" href='https://www.github.com/guillergithub'><Icon path={mdiGithub} size={1.3} color={CSS.white}/></a>
-            <a target='_blank' rel="noreferrer" href='https://open.spotify.com/user/rxhbyo2u51y7xk0tbnta5ykp6'><Icon path={mdiSpotify} size={1.3} color={CSS.white}/></a>
-            <a target='_blank' rel="noreferrer" href='https://www.instagram.com/guillershoot'><Icon path={mdiInstagram} size={1.3} color={CSS.white}/></a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/guillermoesalazar"
+            >
+              <Icon
+                path={mdiLinkedin}
+                size={1.3}
+                color={CSS.white}
+                className="icon"
+              />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.github.com/guillergithub"
+            >
+              <Icon path={mdiGithub} size={1.3} color={CSS.white} />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://open.spotify.com/user/rxhbyo2u51y7xk0tbnta5ykp6"
+            >
+              <Icon path={mdiSpotify} size={1.3} color={CSS.white} />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.instagram.com/guillershoot"
+            >
+              <Icon path={mdiInstagram} size={1.3} color={CSS.white} />
+            </a>
           </SocialsContainer>
           <Circle
             xmlns="http://www.w3.org/2000/svg"
@@ -87,10 +115,9 @@ const Home = ({ handlePageChange }) => {
               <path d="M5373 733 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z" />
             </g>
           </Circle>
-        
         </GreetingContainer>
-        
-        <DesignContainer>          
+
+        <DesignContainer>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             version="1.0"
@@ -126,16 +153,32 @@ const Home = ({ handlePageChange }) => {
               <path d="M5373 733 c9 -2 23 -2 30 0 6 3 -1 5 -18 5 -16 0 -22 -2 -12 -5z" />
             </g>
           </svg>
-          
-          
+
           <HireMeContainer>
+              <p> {i18n[lenguage].home.introducesMe} </p>
             <MachineContainer>
-              <h3>TypeMachine</h3>
+
+              <Typewriter                
+                options={{
+                  strings: [i18n[lenguage].home.developer, i18n[lenguage].home.musician, i18n[lenguage].home.pizza, i18n[lenguage].home.runner],
+                  autoStart: true,
+                  loop: true,
+                  cursorClassName: 'typewritter',
+                  wrapperClassName: 'typewritter'
+                }}
+                onInit={(typewriter) => {
+                  typewriter                    
+                    .pauseFor(2500)
+                    .deleteAll()                    
+                    .start();
+                }}
+              />
             </MachineContainer>
 
-            <Button color={color} onClick={() => handlePageChange(3)}>Hire me</Button>
+            <Button color={color} onClick={() => handlePageChange(3)}>
+              Hire me
+            </Button>
           </HireMeContainer>
-          
         </DesignContainer>
       </HomeContainer>
     </SectionContainer>

@@ -54,7 +54,7 @@ const App = () => {
 
         <Home handlePageChange={(page) => handleOnChange(page)}/>
         <About currentPage={currentPage} /> 
-        <Work currentPage={currentPage}/>
+        <Work currentPage={currentPage} handlePageChange={(page) => handleOnChange(page)}/>
         <Contact currentPage={currentPage}/>
         
         </ReactPageScroller>

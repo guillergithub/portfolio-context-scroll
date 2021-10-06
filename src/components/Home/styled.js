@@ -112,8 +112,12 @@ export const HireMeContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  h3 {
-    margin-bottom: 150px;
+  justify-content: space-around;
+  height: 100%;
+  p {
+    font-size: 5rem;
+    padding-top: 20%;  
+    color: ${CSS.white};
   }
 `;
 
@@ -129,7 +133,16 @@ export const SocialsContainer = styled.div`
 `;
 
 export const MachineContainer = styled.div`
-  h3 {
-    color: ${CSS.white};
+display: flex;
+flex-direction: column;
+color: ${CSS.white};
+position: fixed;
+width: fit-content;
+  div {
+    min-width: max-content;
+  }
+  .typewritter {    
+    font-size: 4.5em;
+
   }
 `;

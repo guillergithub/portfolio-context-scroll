@@ -80,7 +80,7 @@ const About = ({ currentPage }) => {
               <InfoWrapper>
                 <FlexColumn>
                   <p>{i18n[lenguage].about.age}</p>
-                  <span>30</span>
+                  <span>30 {i18n[lenguage].about.ageWord}</span>
                 </FlexColumn>
                 <FlexColumn>
                   <p>{i18n[lenguage].about.locate}</p>
@@ -90,11 +90,11 @@ const About = ({ currentPage }) => {
 
               <ButtonContainer>
                 {lenguage === "es" ? (
-                  <a href="https://www.dropbox.com/s/t47sbcph8j82vds/Guillermo%20Salazar%20CV%202021.pdf?dl=1">
+                  <a href="https://www.dropbox.com/s/k3rk9lfljlfwgfw/Hoja%20de%20Vida.pdf?dl=1">
                     <Button color={color}>{i18n[lenguage].about.downloadCV}</Button>
                   </a>
                 ) : (
-                  <a href="https://www.dropbox.com/s/86vtmd5voydqo1h/English%20CV.pdf?dl=1">
+                  <a href="https://www.dropbox.com/s/rc6mhystvbkw8gu/English%20CV%20.pdf?dl=1">
                     <Button color={color}>{i18n[lenguage].about.downloadCV}</Button>
                   </a>
                 )}

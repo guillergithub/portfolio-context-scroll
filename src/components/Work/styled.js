@@ -26,6 +26,7 @@ export const Project1 = styled.div`
   align-items: flex-end;
   cursor: pointer;
   margin: 10px 5px 5px 0;
+  border-radius: 6px;
 
 
   ${CSS.media.tablet} {
@@ -63,6 +64,7 @@ export const Project3 = styled.div`
   align-items: center;
   cursor: pointer;
   margin: 10px 0px 5px 5px;
+  border-radius: 5px;
   ${CSS.media.tablet} {
     width: 70%;
   }
@@ -94,9 +96,10 @@ export const ProjectBg = styled.div`
   height: 100%;
   background-image: url(${(props) => props.bgImg});
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
   transition: ${CSS.transition};
+  border-radius: 5px;
   &:hover {
     transform: ${CSS.scale};
     transition: ${CSS.transition};
@@ -111,6 +114,15 @@ export const ProjectWrapper = styled.div`
   justify-content: center;
   align-items: ${(props) => props.align && `flex-${props.align}`};
   flex-direction: column;
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      text-decoration: none;
+    }
+  
+
 `;
 
 export const ProjectsContainer = styled.div`
@@ -118,10 +130,6 @@ export const ProjectsContainer = styled.div`
   height: 70vh;
   display: flex;
   justify-content: center;
-  background: #2a2a2a;
-
-  ${CSS.media.tablet} {
-  }
 `;
 
 export const ProjectDescriptionContainer = styled.div`
@@ -168,28 +176,7 @@ export const TechnologiesContainer = styled.div`
   place-items: center center;
   overflow-x: hidden;
   overflow-y: unset;
-  &:before,
-  &:after {
-    background: linear-gradient(
-      to right,
-      rgba(42, 42, 42, 1) 0%,
-      rgba(42, 42, 42, 0) 100%
-    );
-    content: "";
-    height: 100%;
-    position: absolute;
-    width: 15%;
-    z-index: 2;
-  }
-  &:before {
-    left: 0;
-    top: 0;
-  }
-  &:after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
+ 
   img {
     width: 50px;
     height: fit-content;
@@ -211,5 +198,9 @@ export const WorkContainer = styled.div`
   flex-flow: column;
   align-items: center;
   justify-content: flex-start;
-  background: #2a2a2a;
+  background: radial-gradient(
+    circle farthest-corner at center center,
+    #ccc,
+    #333
+  ) no-repeat;
 `;

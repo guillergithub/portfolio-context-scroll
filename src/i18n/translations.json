@@ -3,6 +3,7 @@
     "about": {
       "aboutMe": "Desarrollador y músico compositor. Altamente motivado y centrado en el cumplimiento de mis metas y actividades. Tengo habilidades de trabajo en equipo y comunicación asertiva. Apasionado por el desarrollo de Software y la composición músical.",
       "age": "Edad:",
+      "ageWord": " años",
       "locate": "Mi Ubicación:",
       "studies": "Estudios",
       "onProgress": "En progreso",
@@ -30,13 +31,17 @@
     "config": {
       "configColorSwitcher": "Elige un color",
       "configPredetermined": "Por defecto",
-      "headerLight": "Claro",
-      "headerDark": "Oscuro"
+      "building": "(Construyendo)"
+     
     },
     "home": {
       "mainWelcome": "¡Hola Mundo!",     
       "introducesMe": "Soy",
-      "introducesDeveloper": "desarrollador Front-end."
+      "introducesDeveloper": "desarrollador Front-end.",
+      "pizza": "Cocinero",
+      "developer": "Desarrollador",
+      "musician": "Músico",
+      "runner": "Runner"
     },
     "contact": {
       "name": "Tu nombre",
@@ -56,6 +61,7 @@
     "about": {
       "aboutMe": "Developer and musician. Highly motivaded and focused on the acomplishment of my goals and activities. I have team-work abilties and assertive comunication. I'm passionate about Software developer and music composer.",
       "age": "Age:",
+      "ageWord": " years",
       "locate": "Living in:",
       "studies": "Studies",
       "onProgress": "On progress",
@@ -82,13 +88,16 @@
     "config": {
       "configColorSwitcher": "Chooce a color",
       "configPredetermined": "Reset",
-      "headerLight": "Light",
-      "headerDark": "Dark"
+      "building": "(Building)"
     },
     "home": {
       "mainWelcome": "Hello World!",     
       "introducesMe": "I'm",
-      "introducesDeveloper": "a Front-End developer."
+      "introducesDeveloper": "a Front-End developer.",
+      "pizza": "Pizza Maker",
+      "developer": "Developer",
+      "musician": "Musician",
+      "runner": "Runner"
     },
     "contact": {
       "name": "Your name",

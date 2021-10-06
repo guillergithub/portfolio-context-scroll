@@ -20,7 +20,10 @@ import express from '../assets/images/WorkImages/express-js.svg';
 import flStudio from '../assets/images/WorkImages/fl-studio.png';
 
 /* PROJECTS BACKGROUNDS */
-import efm from '../assets/images/efm.PNG'
+import efm from '../assets/images/WorkImages/efm.PNG'
+import pocketdex from '../assets/images/WorkImages/pocket-dex.PNG'
+import quiz from '../assets/images/WorkImages/quiz-it.PNG'
+import portfolio from '../assets/images/WorkImages/portfolio.PNG'
 
 
 
@@ -47,5 +50,8 @@ export const WorkImages = {
   javascript, 
   jest,
   node,
-  react,  
+  react,
+  pocketdex,
+  quiz,
+  portfolio
 };

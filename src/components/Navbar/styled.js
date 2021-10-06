@@ -81,6 +81,9 @@ export const IconContainer = styled.div`
 `;
 
 export const Logo = styled.div`
+  display: flex;
+  align-items: center;
+
   svg {
     width: 50px;
     height: 35px;
@@ -88,6 +91,22 @@ export const Logo = styled.div`
     z-index: 999;
     cursor: pointer;
   }
+    
+`;
+
+export const LogoText = styled.h5`
+font-family: "Ephesis", cursive;
+    font-size: 2rem;
+    color: ${CSS.white};
+    margin-bottom: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: ${CSS.transition};
+    &:hover {
+      transition: ${CSS.transition};
+      color: ${props => props.color};
+    }
+  
 `;
 
 export const NavContainer = styled.nav`
@@ -174,7 +193,7 @@ export const MenuList = styled.ul`
 export const MenuItem = styled.li`
   list-style: none;
   margin: 0 0 30px 50px;
-  font-size: 2rem;  
+  font-size: 2rem;
 `;
 
 export const MenuLink = styled.span`
@@ -204,7 +223,7 @@ export const NavItem = styled.li`
   color: ${(props) => (props.color === "white" ? CSS.white : props.color)};
   cursor: pointer;
   font-weight: 600;
-  transition: ${CSS.transition};  
+  transition: ${CSS.transition};
 
   &:hover {
     color: ${(props) => props.color};

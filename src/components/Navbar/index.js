@@ -22,6 +22,7 @@ import {
   NavList,
   NavItem,
   IconContainer,
+  LogoText,
 } from "./styled";
 import Icon from "@mdi/react";
 import {
